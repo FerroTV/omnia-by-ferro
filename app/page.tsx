@@ -1,6 +1,35 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-zinc-100">
+      <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/80 backdrop-blur">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <a
+            href="#"
+            className="text-sm font-semibold tracking-[0.3em] text-white"
+          >
+            OMNIA
+          </a>
+
+          <div className="flex items-center gap-6 text-sm text-zinc-400">
+            <a href="#" className="transition hover:text-white">
+              Home
+            </a>
+            <a href="#projects" className="transition hover:text-white">
+              Projects
+            </a>
+            <a href="#lab" className="transition hover:text-white">
+              Lab
+            </a>
+            <a href="#about" className="transition hover:text-white">
+              About
+            </a>
+            <a href="#contact" className="transition hover:text-white">
+              Contact
+            </a>
+          </div>
+        </nav>
+      </header>
+
       <section className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-16">
         <p className="mb-6 text-sm uppercase tracking-[0.4em] text-zinc-500">
           by Ferro
@@ -96,6 +125,92 @@ export default function Home() {
           finished projects.
         </p>
       </section>
+
+      <section
+        id="about"
+        className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
+      >
+        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-zinc-600">
+          About
+        </p>
+
+        <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            Zhelyazko “Ferro” Zhelyazkov.
+          </h2>
+
+          <div className="space-y-6 text-lg leading-8 text-zinc-400">
+            <p>
+              I am building Omnia as a personal digital space for software
+              development, AI concepts, creative experiments and future
+              portfolio work.
+            </p>
+
+            <p>
+              The goal is simple: to collect what I create, what I learn and
+              what I explore in one clean, personal and professional place.
+            </p>
+
+            <p>Omnia is the space. Ferro is the signature.</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
+      >
+        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-zinc-600">
+          Contact
+        </p>
+
+        <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            Let’s connect.
+          </h2>
+
+          <div className="space-y-6 text-lg leading-8 text-zinc-400">
+            <p>
+              Omnia is still growing. For now, this section will collect the
+              main ways to reach me and follow the development of my work.
+            </p>
+
+            <div className="flex flex-col gap-4 text-base">
+              <a
+                  href="mailto:zhelyazkov.it@gmail.com"
+                  className="w-fit text-zinc-300 transition hover:text-white"
+                  >
+                  zhelyazkov.it@gmail.com
+              </a>
+
+              <a
+                href="https://github.com/FerroTV"
+                target="_blank"
+                rel="noreferrer"
+                className="w-fit text-zinc-300 transition hover:text-white"
+              >
+                GitHub / FerroTV
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/zhelyazko-zhelyazkov-29669586"
+                target="_blank"
+                rel="noreferrer"
+                className="w-fit text-zinc-300 transition hover:text-white"
+                >
+                LinkedIn / Zhelyazko Zhelyazkov
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+            <footer className="mx-auto flex max-w-6xl flex-col gap-4 border-t border-zinc-900 px-6 py-10 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Omnia by Ferro.</p>
+
+        <p>
+          Built by Zhelyazko “Ferro” Zhelyazkov.
+        </p>
+      </footer>
     </main>
   );
 }
