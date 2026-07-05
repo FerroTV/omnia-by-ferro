@@ -1408,3 +1408,141 @@ Git върна следния email за текущия проект:
 
 Тя не променя глобалния Git email на компютъра.
 
+---
+
+## Стъпка 57 — Финален re-stage след no-reply документацията
+
+### Цел
+
+Да се добави последната версия на `PROJECT_LOG.md` към staging area след документиране на GitHub no-reply email настройката.
+
+### Изпълнена команда
+
+```powershell
+git add docs/PROJECT_LOG.md
+```
+
+### Проверка
+
+```powershell
+git status --short
+```
+
+### Резултат
+
+Git показа следното staged състояние:
+
+```txt
+M  app/layout.tsx
+M  app/page.tsx
+A  docs/CONCEPT.md
+A  docs/GLOSSARY.md
+A  docs/PROJECT_LOG.md
+```
+
+### Бележки
+
+Всички файлове за първия Git checkpoint бяха staged.
+
+---
+
+## Стъпка 58 — Проверка на staged промените
+
+### Цел
+
+Да се провери какво точно ще влезе в първия commit.
+
+### Изпълнена команда
+
+```powershell
+git --no-pager diff --cached --stat
+```
+
+### Резултат
+
+Git показа обобщение на staged промените:
+
+```txt
+app/layout.tsx      |    5 +-
+app/page.tsx        |   79 +--
+docs/CONCEPT.md     |  373 ++++++++++++++
+docs/GLOSSARY.md    | 1288 ++++++++++++++++++++++++++++++++++++++++++++++
+docs/PROJECT_LOG.md | 1410 +++++++++++++++++++++++++++++++++++++++++++++++++++
+5 files changed, 3099 insertions(+), 56 deletions(-)
+```
+
+### Бележки
+
+Големият брой добавени редове идва основно от документацията.
+
+---
+
+## Стъпка 59 — Първи Git commit
+
+### Цел
+
+Да се създаде първият Git checkpoint на проекта.
+
+### Изпълнена команда
+
+```powershell
+git commit -m "Initial Omnia by Ferro homepage and docs"
+```
+
+### Резултат
+
+Commit-ът беше създаден успешно.
+
+```txt
+Commit hash: ac718f5
+Commit message: Initial Omnia by Ferro homepage and docs
+Branch: master
+```
+
+### Включени файлове
+
+```txt
+app/layout.tsx
+app/page.tsx
+docs/CONCEPT.md
+docs/GLOSSARY.md
+docs/PROJECT_LOG.md
+```
+
+### Бележки
+
+Това е първата запазена контролна точка на проекта **Omnia by Ferro**.
+
+---
+
+## Стъпка 60 — Проверка след първия commit
+
+### Цел
+
+Да се потвърди, че commit-ът е създаден и работната директория е чиста.
+
+### Изпълнени команди
+
+```powershell
+git status --short
+git log --oneline -1
+```
+
+### Резултат
+
+Командата `git status --short` не върна никакви файлове.
+
+Това означава, че работната директория е чиста.
+
+Последният commit беше потвърден:
+
+```txt
+ac718f5 (HEAD -> master) Initial Omnia by Ferro homepage and docs
+```
+
+### Бележки
+
+Проектът има първи стабилен Git checkpoint.
+
+След тази точка може безопасно да се продължи с нови промени.
+
