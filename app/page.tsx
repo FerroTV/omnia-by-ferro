@@ -79,9 +79,20 @@ className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm 
               CRM Integration
             </h3>
             <p className="mt-4 text-sm leading-6 text-zinc-400">
-              Outlook and calendar integration concept for a PHP-based CRM
-              system.
+              Outlook and calendar integration for a PHP-based CRM system,
+              focused on reducing media breaks and documenting communication.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                PHP
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Microsoft Graph
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                CRM
+              </span>
+            </div>
           </article>
 
           <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
@@ -89,8 +100,20 @@ className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm 
             <h3 className="mt-4 text-xl font-medium text-white">SSI App</h3>
             <p className="mt-4 text-sm leading-6 text-zinc-400">
               Educational Angular application with interactive sections for
-              children.
+              children, created as a learning project with planets, quizzes and
+              playful content.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Angular
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                TypeScript
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Learning App
+              </span>
+            </div>
           </article>
 
           <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
@@ -99,9 +122,20 @@ className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm 
               Omnia by Ferro
             </h3>
             <p className="mt-4 text-sm leading-6 text-zinc-400">
-              A personal website and digital archive for code, ideas and
-              creative experiments.
+              Personal digital space, portfolio and creative archive for code,
+              AI concepts, visual experiments and future digital systems.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Next.js
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Tailwind CSS
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Portfolio
+              </span>
+            </div>
           </article>
         </div>
       </section>
