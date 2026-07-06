@@ -2420,4 +2420,26 @@ Changes:
 Commit:
 - `407a5d7 Add initial i18n content structure`
 
+## 2026-07-06 — Visual language selector
+
+Added the first visual language selector to the Omnia by Ferro website header.
+
+Changes:
+- Extended the homepage imports to use `locales` and `localeShortLabels`.
+- Added a compact EN / DE / BG selector in the header.
+- Marked English (`EN`) as the active default locale.
+- Kept the selector visual only for now.
+- Did not add real language switching behavior yet.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+- Confirmed that the live site loads correctly and shows the language selector.
+
+Commit:
+- `43736b5 Add visual language selector`
+
+
+
+
 
