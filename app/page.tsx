@@ -1,4 +1,9 @@
+import { homeContent } from "@/content/home";
+import { defaultLocale } from "@/lib/i18n";
+
 export default function Home() {
+  const content = homeContent[defaultLocale];
+
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_32%),linear-gradient(to_bottom,black,rgb(9,9,11)_45%,black)] text-zinc-100">
       <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/70 backdrop-blur-xl">
@@ -10,21 +15,21 @@ export default function Home() {
       OMNIA
     </a>
 
-    <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-400">
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-400">
             <a href="#" className="transition hover:text-white">
-              Home
+              {content.navigation.home}
             </a>
             <a href="#projects" className="transition hover:text-white">
-              Projects
+              {content.navigation.projects}
             </a>
             <a href="#lab" className="transition hover:text-white">
-              Lab
+              {content.navigation.lab}
             </a>
             <a href="#about" className="transition hover:text-white">
-              About
+              {content.navigation.about}
             </a>
             <a href="#contact" className="transition hover:text-white">
-              Contact
+              {content.navigation.contact}
             </a>
           </div>
         </nav>
