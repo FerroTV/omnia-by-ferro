@@ -2,15 +2,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-zinc-100">
       <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/80 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <a
-            href="#"
-            className="text-sm font-semibold tracking-[0.3em] text-white"
-          >
-            OMNIA
-          </a>
+  <nav className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+    <a
+      href="#"
+      className="text-sm font-semibold tracking-[0.3em] text-white"
+    >
+      OMNIA
+    </a>
 
-          <div className="flex items-center gap-6 text-sm text-zinc-400">
+    <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-400">
             <a href="#" className="transition hover:text-white">
               Home
             </a>
@@ -30,7 +30,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-16">
+      <section className="mx-auto flex min-h-[calc(100vh-97px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16">
         <p className="mb-6 text-sm uppercase tracking-[0.4em] text-zinc-500">
           by Ferro
         </p>
