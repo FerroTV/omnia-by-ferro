@@ -2130,3 +2130,73 @@ https://omnia-by-ferro.vercel.app
 ### Резултат
 
 Началната страница вече изглежда по-завършена и по-консистентна като минималистичен portfolio/interface проект.
+
+---
+
+## Стъпка 190–199 — Projects section content polish
+
+### Цел
+
+Да се подобри съдържанието на Projects секцията, така че картите да изглеждат по-реални и по-подходящи за portfolio сайт.
+
+### Направени промени
+
+Във файла `app/page.tsx` бяха подобрени трите project карти:
+
+- `CRM Integration`;
+- `SSI App`;
+- `Omnia by Ferro`.
+
+Към всяка карта беше добавено:
+
+- по-ясно описание;
+- по-конкретен контекст;
+- tech/context badges.
+
+### Project badges
+
+`CRM Integration`:
+
+- PHP;
+- Microsoft Graph;
+- CRM.
+
+`SSI App`:
+
+- Angular;
+- TypeScript;
+- Learning App.
+
+`Omnia by Ferro`:
+
+- Next.js;
+- Tailwind CSS;
+- Portfolio.
+
+### Проверки
+
+Беше изпълнена ESLint проверка с `npm run lint`.
+
+Резултат: без грешки.
+
+### Git
+
+Промяната беше записана с commit:
+
+`62d0d60 Improve projects section content`
+
+### Deployment
+
+След `git push` Vercel автоматично направи нов production deployment.
+
+Статус: Ready.
+
+### Live проверка
+
+Промяната беше проверена на live сайта:
+
+https://omnia-by-ferro.vercel.app/#projects
+
+### Резултат
+
+Projects секцията вече изглежда по-съдържателна и по-близо до реална portfolio секция.
