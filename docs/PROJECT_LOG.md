@@ -2346,3 +2346,27 @@ Contact секцията вече обяснява по-добре защо ня
 Промяната беше проверена на live сайта:
 
 https://omnia-by-ferro.vercel.app/#contact
+
+## 2026-07-06 — Brand polish: favicon and site metadata
+
+Completed a small brand polish block for the live Omnia by Ferro website.
+
+Changes:
+- Added a custom SVG favicon in `public/favicon.svg`.
+- Connected the favicon through the Next.js metadata configuration.
+- Extended the site metadata with:
+  - application name
+  - author / creator / publisher information
+  - keywords
+  - Open Graph metadata
+  - Twitter preview metadata
+- Verified the favicon locally in the browser tab.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+- Confirmed that the live site loads correctly with the new favicon.
+
+Commit:
+- `38d8b51 Add favicon and site metadata`
+
