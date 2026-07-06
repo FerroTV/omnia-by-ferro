@@ -259,11 +259,22 @@ className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm 
           </h2>
 
           <div className="space-y-6 text-lg leading-8 text-zinc-400">
-            <p>
-              Omnia is still growing. For now, this section will collect the
-              main ways to reach me and follow the development of my work.
-            </p>
-
+           <p>
+            Omnia is an evolving digital space. If you want to connect, follow
+            the development of my work or reach out about ideas, projects or
+            collaboration, these are the best places to find me.
+          </p>
+            <div className="flex flex-wrap gap-2 text-xs text-zinc-500">
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Open to ideas
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Portfolio in progress
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Based in Germany
+              </span>
+            </div>
             <div className="flex flex-col gap-4 text-base">
               <a
                   href="mailto:zhelyazkov.it@gmail.com"
