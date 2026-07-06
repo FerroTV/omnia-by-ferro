@@ -13,9 +13,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://omnia-by-ferro.vercel.app"),
   title: "Omnia by Ferro",
   description:
     "A personal digital space for projects, ideas, code, art and experiments.",
+  applicationName: "Omnia by Ferro",
+  authors: [{ name: "Zhelyazko “Ferro” Zhelyazkov" }],
+  creator: "Zhelyazko “Ferro” Zhelyazkov",
+  publisher: "Zhelyazko “Ferro” Zhelyazkov",
+  keywords: [
+    "Omnia",
+    "Ferro",
+    "portfolio",
+    "software development",
+    "AI concepts",
+    "creative archive",
+    "digital experiments",
+  ],
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Omnia by Ferro",
+    description:
+      "A personal digital space for projects, ideas, code, art and experiments.",
+    url: "https://omnia-by-ferro.vercel.app",
+    siteName: "Omnia by Ferro",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Omnia by Ferro",
+    description:
+      "A personal digital space for projects, ideas, code, art and experiments.",
+  },
 };
 
 export default function RootLayout({
