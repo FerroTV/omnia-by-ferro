@@ -157,6 +157,39 @@ className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm 
           interface ideas, visual tests and future prototypes before they become
           finished projects.
         </p>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
+    <h3 className="text-sm font-medium text-white">AI Concepts</h3>
+    <p className="mt-3 text-sm leading-6 text-zinc-500">
+      Ideas for intelligent systems, digital memory, learning flows and
+      future assistant behavior.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
+    <h3 className="text-sm font-medium text-white">Interface Experiments</h3>
+    <p className="mt-3 text-sm leading-6 text-zinc-500">
+      Small tests around navigation, interaction, visual hierarchy and
+      minimal user interfaces.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
+    <h3 className="text-sm font-medium text-white">Visual Prototypes</h3>
+    <p className="mt-3 text-sm leading-6 text-zinc-500">
+      Experimental layouts, motion ideas, art direction tests and visual
+      identity explorations.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
+    <h3 className="text-sm font-medium text-white">Future Systems</h3>
+    <p className="mt-3 text-sm leading-6 text-zinc-500">
+      Early thoughts about tools, personal platforms and digital systems
+      that may become full projects later.
+    </p>
+  </div>
+</div>
       </section>
 
       <section
