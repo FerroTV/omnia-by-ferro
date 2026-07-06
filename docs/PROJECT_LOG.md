@@ -1898,3 +1898,69 @@ ESLint мина успешно без грешки.
 Това е първата responsive корекция на началната страница.
 
 По-късно може да се направи допълнителен polish за още по-малки екрани.
+
+---
+
+## Стъпка 111–118 — GitHub repository и първи push
+
+### Цел
+
+Да се създаде GitHub repository за проекта и локалният Git проект да бъде качен онлайн.
+
+### GitHub repository
+
+Беше създадено публично repository:
+
+```txt
+https://github.com/FerroTV/omnia-by-ferro
+```
+
+### Branch
+
+Локалният branch беше преименуван от:
+
+```txt
+master
+```
+
+на:
+
+```txt
+main
+```
+
+### Remote
+
+Беше добавен GitHub remote:
+
+```txt
+origin  https://github.com/FerroTV/omnia-by-ferro.git
+```
+
+### Push
+
+Проектът беше качен в GitHub с:
+
+```powershell
+git push -u origin main
+```
+
+### Резултат
+
+Локалният branch `main` вече следи GitHub branch-а `origin/main`.
+
+Проверка:
+
+```powershell
+git status -sb
+```
+
+Резултат:
+
+```txt
+## main...origin/main
+```
+
+### Бележка
+
+От този момент нататък проектът има локална Git история и онлайн копие в GitHub.
