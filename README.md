@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Omnia by Ferro
 
-## Getting Started
+**Omnia by Ferro** is a personal digital space created by Zhelyazko “Ferro” Zhelyazkov.
 
-First, run the development server:
+The project is being built as a hybrid personal website, portfolio and digital archive for:
+
+- software projects;
+- learning paths;
+- AI concepts;
+- creative experiments;
+- future digital systems.
+
+## Concept
+
+**Omnia** is the space.
+
+**Ferro** is the creative signature.
+
+The goal of this project is to collect ideas, code, visual experiments and finished work in one clean, minimal and personal website.
+
+## Current version
+
+The current version includes:
+
+- a landing page;
+- responsive navigation;
+- hero section;
+- projects section;
+- lab section;
+- about section;
+- contact section;
+- basic project documentation.
+
+## Tech stack
+
+This project is built with:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- ESLint
+
+## Development
+
+To start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact
 
-## Learn More
+Email: zhelyazkov.it@gmail.com
 
-To learn more about Next.js, take a look at the following resources:
+GitHub: https://github.com/FerroTV
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+LinkedIn: https://www.linkedin.com/in/zhelyazko-zhelyazkov-29669586
