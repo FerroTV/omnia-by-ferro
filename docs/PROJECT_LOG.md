@@ -1964,3 +1964,69 @@ git status -sb
 ### Бележка
 
 От този момент нататък проектът има локална Git история и онлайн копие в GitHub.
+
+---
+
+## Стъпка 129–137 — Vercel deployment
+
+### Цел
+
+Да се публикува проектът онлайн чрез Vercel.
+
+### Причина за избор на Vercel
+
+Проектът е изграден с Next.js, а Vercel има директна интеграция с GitHub и автоматично разпознава Next.js приложения.
+
+### Vercel project
+
+Беше създаден Vercel project:
+
+```txt
+omnia-by-ferro
+```
+
+### Свързан GitHub repository
+
+```txt
+https://github.com/FerroTV/omnia-by-ferro
+```
+
+### Branch
+
+Deployment-ът използва branch:
+
+```txt
+main
+```
+
+### Framework preset
+
+Vercel автоматично разпозна проекта като:
+
+```txt
+Next.js
+```
+
+### Production deployment
+
+Първият production deployment беше успешен.
+
+Статус:
+
+```txt
+Ready
+```
+
+### Live URL
+
+Сайтът е достъпен онлайн на:
+
+```txt
+https://omnia-by-ferro.vercel.app
+```
+
+### Резултат
+
+Проектът вече има работеща live версия.
+
+От този момент нататък всяка следваща промяна, качена към GitHub branch `main`, може да създава нов Vercel deployment.
