@@ -2200,3 +2200,48 @@ https://omnia-by-ferro.vercel.app/#projects
 ### Резултат
 
 Projects секцията вече изглежда по-съдържателна и по-близо до реална portfolio секция.
+
+---
+
+## Стъпка 204–211 — Lab section content polish
+
+### Цел
+
+Да се направи Lab секцията по-съдържателна и по-ясна като експериментална зона на Omnia.
+
+### Направени промени
+
+Във файла `app/page.tsx` към Lab секцията бяха добавени четири направления:
+
+- `AI Concepts`;
+- `Interface Experiments`;
+- `Visual Prototypes`;
+- `Future Systems`.
+
+### Резултат
+
+Lab секцията вече не е само общо описание, а показва какви типове идеи и експерименти ще живеят в тази част на сайта.
+
+### Проверки
+
+Беше изпълнена ESLint проверка с `npm run lint`.
+
+Резултат: без грешки.
+
+### Git
+
+Промяната беше записана с commit:
+
+`44626c4 Improve lab section content`
+
+### Deployment
+
+След `git push` Vercel автоматично направи нов production deployment.
+
+Статус: Ready.
+
+### Live проверка
+
+Промяната беше проверена на live сайта:
+
+https://omnia-by-ferro.vercel.app/#lab
