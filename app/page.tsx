@@ -47,15 +47,14 @@ export default function Home() {
         <div className="mt-12 flex flex-col gap-4 sm:flex-row">
           <a
             href="#projects"
-            className="rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-100 transition hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
+            className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
           >
             Explore Projects
           </a>
 
           <a
             href="#lab"
-            className="rounded-full px-6 py-3 text-sm font-medium text-zinc-400 transition hover:text-zinc-100"
-          >
+className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"          >
             Enter the Lab
           </a>
         </div>
@@ -65,7 +64,7 @@ export default function Home() {
         id="projects"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
-        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-zinc-600">
+        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           Projects
         </p>
 
@@ -111,7 +110,7 @@ export default function Home() {
         id="lab"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
-        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-zinc-600">
+        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           Lab
         </p>
 
@@ -130,7 +129,7 @@ export default function Home() {
         id="about"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
-        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-zinc-600">
+        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           About
         </p>
 
@@ -160,7 +159,7 @@ export default function Home() {
         id="contact"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
-        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-zinc-600">
+        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           Contact
         </p>
 
@@ -178,7 +177,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 text-base">
               <a
                   href="mailto:zhelyazkov.it@gmail.com"
-                  className="w-fit text-zinc-300 transition hover:text-white"
+                  className="w-fit rounded-full border border-zinc-800 bg-zinc-950/60 px-4 py-2 text-zinc-300 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-600 hover:bg-zinc-900/70 hover:text-white"
                   >
                   zhelyazkov.it@gmail.com
               </a>
@@ -187,7 +186,7 @@ export default function Home() {
                 href="https://github.com/FerroTV"
                 target="_blank"
                 rel="noreferrer"
-                className="w-fit text-zinc-300 transition hover:text-white"
+                className="w-fit rounded-full border border-zinc-800 bg-zinc-950/60 px-4 py-2 text-zinc-300 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-600 hover:bg-zinc-900/70 hover:text-white"
               >
                 GitHub / FerroTV
               </a>
@@ -196,7 +195,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/zhelyazko-zhelyazkov-29669586"
                 target="_blank"
                 rel="noreferrer"
-                className="w-fit text-zinc-300 transition hover:text-white"
+                className="w-fit rounded-full border border-zinc-800 bg-zinc-950/60 px-4 py-2 text-zinc-300 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-600 hover:bg-zinc-900/70 hover:text-white"
                 >
                 LinkedIn / Zhelyazko Zhelyazkov
               </a>
@@ -204,13 +203,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-            <footer className="mx-auto flex max-w-6xl flex-col gap-4 border-t border-zinc-900 px-6 py-10 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Omnia by Ferro.</p>
+            <footer className="mx-auto flex max-w-6xl flex-col gap-4 border-t border-zinc-900/80 px-6 py-10 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
+  <p className="tracking-wide">© 2026 Omnia by Ferro.</p>
 
-        <p>
-          Built by Zhelyazko “Ferro” Zhelyazkov.
-        </p>
-      </footer>
+  <p className="tracking-wide text-zinc-500">
+    Built by Zhelyazko “Ferro” Zhelyazkov.
+  </p>
+</footer>
     </main>
   );
 }
