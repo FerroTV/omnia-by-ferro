@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-zinc-100">
-      <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/80 backdrop-blur">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_32%),linear-gradient(to_bottom,black,rgb(9,9,11)_45%,black)] text-zinc-100">
+      <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/70 backdrop-blur-xl">
   <nav className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
     <a
       href="#"
@@ -31,13 +31,13 @@ export default function Home() {
       </header>
 
       <section className="mx-auto flex min-h-[calc(100vh-97px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16">
-        <p className="mb-6 text-sm uppercase tracking-[0.4em] text-zinc-500">
-          by Ferro
-        </p>
+        <p className="mb-6 w-fit rounded-full border border-zinc-800 bg-zinc-950/70 px-4 py-2 text-xs uppercase tracking-[0.4em] text-zinc-400 shadow-2xl shadow-white/5">
+  by Ferro
+</p>
 
-        <h1 className="text-6xl font-semibold tracking-tight text-white sm:text-8xl">
-          OMNIA
-        </h1>
+        <h1 className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl">
+  OMNIA
+</h1>
 
         <p className="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
           A personal digital space for projects, ideas, code, art and
@@ -74,7 +74,7 @@ export default function Home() {
         </h2>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <article className="rounded-3xl border border-zinc-800 bg-zinc-950 p-6">
+          <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
             <p className="text-sm text-zinc-500">Software Project</p>
             <h3 className="mt-4 text-xl font-medium text-white">
               CRM Integration
@@ -85,7 +85,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="rounded-3xl border border-zinc-800 bg-zinc-950 p-6">
+          <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
             <p className="text-sm text-zinc-500">Learning Project</p>
             <h3 className="mt-4 text-xl font-medium text-white">SSI App</h3>
             <p className="mt-4 text-sm leading-6 text-zinc-400">
@@ -94,7 +94,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="rounded-3xl border border-zinc-800 bg-zinc-950 p-6">
+          <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
             <p className="text-sm text-zinc-500">Portfolio System</p>
             <h3 className="mt-4 text-xl font-medium text-white">
               Omnia by Ferro
