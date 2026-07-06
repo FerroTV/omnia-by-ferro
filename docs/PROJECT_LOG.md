@@ -2395,3 +2395,29 @@ Changes:
 Commit:
 - `a0efa71 Add Open Graph preview image`
 
+## 2026-07-06 — Initial i18n content structure
+
+Started the multilingual structure for the Omnia by Ferro website.
+
+Changes:
+- Added a new `lib/i18n.ts` file.
+- Defined the initial supported locales:
+  - English (`en`)
+  - German (`de`)
+  - Bulgarian (`bg`)
+- Added locale labels and short labels.
+- Added a new `content/home.ts` file for homepage text content.
+- Moved the navigation labels into the new homepage content structure.
+- Connected the homepage navigation in `app/page.tsx` to `homeContent`.
+- Kept English as the default locale.
+- Verified that the visual website output remains unchanged.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+- Confirmed that the live site loads correctly.
+
+Commit:
+- `407a5d7 Add initial i18n content structure`
+
+
