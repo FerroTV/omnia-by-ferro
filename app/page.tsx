@@ -1,5 +1,5 @@
 import { homeContent } from "@/content/home";
-import { defaultLocale } from "@/lib/i18n";
+import { defaultLocale, localeShortLabels, locales } from "@/lib/i18n";
 
 export default function Home() {
   const content = homeContent[defaultLocale];
@@ -32,6 +32,25 @@ export default function Home() {
               {content.navigation.contact}
             </a>
           </div>
+          <div
+  aria-label="Language selector"
+  className="flex w-fit items-center rounded-full border border-zinc-800 bg-zinc-950/70 p-1 text-xs text-zinc-500"
+>
+  {locales.map((locale) => (
+    <button
+      key={locale}
+      type="button"
+      aria-pressed={locale === defaultLocale}
+      className={`rounded-full px-3 py-1.5 transition ${
+        locale === defaultLocale
+          ? "bg-zinc-100 text-black"
+          : "hover:text-white"
+      }`}
+    >
+      {localeShortLabels[locale]}
+    </button>
+  ))}
+</div>
         </nav>
       </header>
 
