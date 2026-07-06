@@ -2370,3 +2370,28 @@ Changes:
 Commit:
 - `38d8b51 Add favicon and site metadata`
 
+## 2026-07-06 — Social preview image / Open Graph polish
+
+Completed a social preview image block for the live Omnia by Ferro website.
+
+Changes:
+- Added a new Next.js Open Graph image route in `app/opengraph-image.tsx`.
+- Created a custom 1200 × 630 preview image using `next/og`.
+- Designed the preview image to match the visual identity of the website:
+  - dark minimal background
+  - Omnia by Ferro title
+  - personal digital space label
+  - short project description
+  - author name
+  - live domain
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Verified that Next.js recognizes the `/opengraph-image` route.
+- Checked the generated image locally.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+- Confirmed that the live Open Graph image loads correctly.
+
+Commit:
+- `a0efa71 Add Open Graph preview image`
+
