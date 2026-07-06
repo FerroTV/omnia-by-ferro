@@ -2296,3 +2296,53 @@ About секцията вече обяснява по-добре идеята з
 
 https://omnia-by-ferro.vercel.app/#about
 
+---
+
+## Стъпка 229–237 — Contact section content polish
+
+### Цел
+
+Да се направи Contact секцията по-професионална, по-ясна и по-свързана с развитието на Omnia.
+
+### Направени промени
+
+Във файла `app/page.tsx` беше подобрен текстът в Contact секцията.
+
+Добавен беше малък status/context ред:
+
+- `Open to ideas`;
+- `Portfolio in progress`;
+- `Based in Germany`.
+
+### Резултат
+
+Contact секцията вече обяснява по-добре защо някой би се свързал:
+
+- за идеи;
+- за развитие на проекта;
+- за проекти;
+- за collaboration.
+
+### Проверки
+
+Беше изпълнена ESLint проверка с `npm run lint`.
+
+Резултат: без грешки.
+
+### Git
+
+Промяната беше записана с commit:
+
+`90409ea Improve contact section content`
+
+### Deployment
+
+След `git push` Vercel автоматично направи нов production deployment.
+
+Статус: Ready.
+
+### Live проверка
+
+Промяната беше проверена на live сайта:
+
+https://omnia-by-ferro.vercel.app/#contact
