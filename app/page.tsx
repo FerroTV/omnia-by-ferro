@@ -207,17 +207,40 @@ className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm 
 
           <div className="space-y-6 text-lg leading-8 text-zinc-400">
             <p>
-              I am building Omnia as a personal digital space for software
-              development, AI concepts, creative experiments and future
-              portfolio work.
+              I am building Omnia as a personal digital space where software
+              development, AI concepts, visual experiments and learning paths can
+              live together.
             </p>
 
             <p>
-              The goal is simple: to collect what I create, what I learn and
-              what I explore in one clean, personal and professional place.
+              This website is not meant to be only a portfolio. It is also a
+              growing archive of ideas, prototypes, unfinished thoughts and
+              systems that may become something bigger over time.
             </p>
 
-            <p>Omnia is the space. Ferro is the signature.</p>
+            <p>
+              My focus is on clean digital products, thoughtful interfaces,
+              practical learning and the connection between technology and
+              creativity.
+            </p>
+
+            <p className="text-zinc-300">
+              Omnia is the space. Ferro is the signature.
+            </p>
+            <div className="flex flex-wrap gap-2 pt-2 text-xs text-zinc-500">
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Software
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                AI Concepts
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Interfaces
+              </span>
+              <span className="rounded-full border border-zinc-800 px-3 py-1">
+                Creative Systems
+              </span>
+            </div>
           </div>
         </div>
       </section>
