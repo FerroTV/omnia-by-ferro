@@ -2460,5 +2460,28 @@ Changes:
 Commit:
 - `9224e19 Add interactive language switching`
 
+## 2026-07-07 — Multilingual Hero content
+
+Added multilingual content for the Hero section of the Omnia by Ferro homepage.
+
+Changes:
+- Extended `content/home.ts` with a new Hero content structure.
+- Added English, German and Bulgarian Hero text.
+- Added translated Hero descriptions.
+- Added translated primary and secondary action labels.
+- Connected the Hero section in `app/page.tsx` to the active locale.
+- Kept the Omnia title and Ferro signature consistent across all languages.
+- Verified the layout in English, German and Bulgarian.
+- Confirmed that longer German and Bulgarian text wraps correctly.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+
+Commit:
+- `ee5f610 Add multilingual hero content`
+
+
+
 
 
