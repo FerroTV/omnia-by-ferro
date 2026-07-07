@@ -2481,6 +2481,30 @@ Changes:
 Commit:
 - `ee5f610 Add multilingual hero content`
 
+## 2026-07-07 — Multilingual Projects content
+
+Added multilingual content for the Projects section of the Omnia by Ferro homepage.
+
+Changes:
+- Extended `content/home.ts` with a Projects content structure.
+- Added English, German and Bulgarian section labels and headings.
+- Added translated project categories and descriptions.
+- Added translated tags where appropriate.
+- Replaced the three hardcoded project cards with data-driven rendering.
+- Used `.map()` to generate project cards and tag badges.
+- Kept project and technology names consistent across languages where appropriate.
+- Verified the Projects section in English, German and Bulgarian.
+- Confirmed that longer German and Bulgarian text does not break the card layout.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+
+Commit:
+- `9eadcca Add multilingual projects content`
+
+
+
 
 
 
