@@ -45,6 +45,17 @@ type HomeContent = {
     statement: string;
     tags: string[];
   };
+  contact: {
+    label: string;
+    title: string;
+    description: string;
+    tags: string[];
+    links: {
+      label: string;
+      href: string;
+      external?: boolean;
+    }[];
+  };
 };
 
 export const homeContent: Record<Locale, HomeContent> = {
@@ -130,6 +141,29 @@ export const homeContent: Record<Locale, HomeContent> = {
       statement: "Omnia is the space. Ferro is the signature.",
       tags: ["Software", "AI Concepts", "Interfaces", "Creative Systems"],
     },
+    contact: {
+      label: "Contact",
+      title: "Let’s connect.",
+      description:
+        "Omnia is an evolving digital space. If you want to connect, follow the development of my work or reach out about ideas, projects or collaboration, these are the best places to find me.",
+      tags: ["Open to ideas", "Portfolio in progress", "Based in Germany"],
+      links: [
+        {
+          label: "zhelyazkov.it@gmail.com",
+          href: "mailto:zhelyazkov.it@gmail.com",
+        },
+        {
+          label: "GitHub / FerroTV",
+          href: "https://github.com/FerroTV",
+          external: true,
+        },
+        {
+          label: "LinkedIn / Zhelyazko Zhelyazkov",
+          href: "https://www.linkedin.com/in/zhelyazko-zhelyazkov-29669586",
+          external: true,
+        },
+      ],
+    },
   },
 
   de: {
@@ -213,6 +247,29 @@ export const homeContent: Record<Locale, HomeContent> = {
       ],
       statement: "Omnia ist der Raum. Ferro ist die Signatur.",
       tags: ["Software", "KI-Konzepte", "Interfaces", "Kreative Systeme"],
+    },
+    contact: {
+      label: "Kontakt",
+      title: "Lass uns in Kontakt treten.",
+      description:
+        "Omnia ist ein sich ständig weiterentwickelnder digitaler Raum. Wenn du Kontakt aufnehmen, die Entwicklung meiner Arbeit verfolgen oder dich über Ideen, Projekte oder eine Zusammenarbeit austauschen möchtest, findest du mich am besten über diese Kanäle.",
+      tags: ["Offen für Ideen", "Portfolio im Aufbau", "In Deutschland"],
+      links: [
+        {
+          label: "zhelyazkov.it@gmail.com",
+          href: "mailto:zhelyazkov.it@gmail.com",
+        },
+        {
+          label: "GitHub / FerroTV",
+          href: "https://github.com/FerroTV",
+          external: true,
+        },
+        {
+          label: "LinkedIn / Zhelyazko Zhelyazkov",
+          href: "https://www.linkedin.com/in/zhelyazko-zhelyazkov-29669586",
+          external: true,
+        },
+      ],
     },
   },
 
@@ -301,6 +358,29 @@ export const homeContent: Record<Locale, HomeContent> = {
         "Концепции с изкуствен интелект",
         "Интерфейси",
         "Творчески системи",
+      ],
+    },
+    contact: {
+      label: "Контакт",
+      title: "Нека се свържем.",
+      description:
+        "Omnia е развиващо се дигитално пространство. Ако искаш да се свържеш с мен, да следиш развитието на работата ми или да поговорим за идеи, проекти или сътрудничество, това са най-добрите места, на които можеш да ме откриеш.",
+      tags: ["Отворен за идеи", "Портфолиото се развива", "Базиран в Германия"],
+      links: [
+        {
+          label: "zhelyazkov.it@gmail.com",
+          href: "mailto:zhelyazkov.it@gmail.com",
+        },
+        {
+          label: "GitHub / FerroTV",
+          href: "https://github.com/FerroTV",
+          external: true,
+        },
+        {
+          label: "LinkedIn / Желязко Желязков",
+          href: "https://www.linkedin.com/in/zhelyazko-zhelyazkov-29669586",
+          external: true,
+        },
       ],
     },
   },

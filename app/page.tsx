@@ -202,61 +202,46 @@ const content = homeContent[locale];
         </div>
       </section>
 
-      <section
+            <section
         id="contact"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
         <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
-          Contact
+          {content.contact.label}
         </p>
 
         <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-            Let’s connect.
+            {content.contact.title}
           </h2>
 
           <div className="space-y-6 text-lg leading-8 text-zinc-400">
-           <p>
-            Omnia is an evolving digital space. If you want to connect, follow
-            the development of my work or reach out about ideas, projects or
-            collaboration, these are the best places to find me.
-          </p>
+            <p>{content.contact.description}</p>
+
             <div className="flex flex-wrap gap-2 text-xs text-zinc-500">
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Open to ideas
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Portfolio in progress
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Based in Germany
-              </span>
-            </div>
-            <div className="flex flex-col gap-4 text-base">
-              <a
-                  href="mailto:zhelyazkov.it@gmail.com"
-                  className="w-fit rounded-full border border-zinc-800 bg-zinc-950/60 px-4 py-2 text-zinc-300 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-600 hover:bg-zinc-900/70 hover:text-white"
-                  >
-                  zhelyazkov.it@gmail.com
-              </a>
-
-              <a
-                href="https://github.com/FerroTV"
-                target="_blank"
-                rel="noreferrer"
-                className="w-fit rounded-full border border-zinc-800 bg-zinc-950/60 px-4 py-2 text-zinc-300 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-600 hover:bg-zinc-900/70 hover:text-white"
-              >
-                GitHub / FerroTV
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/zhelyazko-zhelyazkov-29669586"
-                target="_blank"
-                rel="noreferrer"
-                className="w-fit rounded-full border border-zinc-800 bg-zinc-950/60 px-4 py-2 text-zinc-300 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-600 hover:bg-zinc-900/70 hover:text-white"
+              {content.contact.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-zinc-800 px-3 py-1"
                 >
-                LinkedIn / Zhelyazko Zhelyazkov
-              </a>
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-4 text-base">
+              {content.contact.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  {...(link.external
+                    ? { target: "_blank", rel: "noreferrer" }
+                    : {})}
+                  className="w-fit rounded-full border border-zinc-800 bg-zinc-950/60 px-4 py-2 text-zinc-300 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-600 hover:bg-zinc-900/70 hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>
