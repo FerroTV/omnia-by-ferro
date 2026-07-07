@@ -2503,6 +2503,30 @@ Changes:
 Commit:
 - `9eadcca Add multilingual projects content`
 
+## 2026-07-07 — Multilingual Lab content
+
+Added multilingual content for the Lab section of the Omnia by Ferro homepage.
+
+Changes:
+- Extended `content/home.ts` with a Lab content structure.
+- Added English, German and Bulgarian section labels, headings and descriptions.
+- Added translated titles and descriptions for the four Lab cards.
+- Replaced the hardcoded Lab cards with data-driven rendering.
+- Used `.map()` to generate the Lab cards.
+- Connected the Lab section in `app/page.tsx` to the active locale.
+- Verified the Lab section in English, German and Bulgarian.
+- Confirmed that longer German and Bulgarian text does not break the layout.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+
+Commit:
+- `4a93a49 Add multilingual lab content`
+
+
+
+
 
 
 
