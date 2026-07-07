@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { homeContent } from "@/content/home";
 import {
   defaultLocale,
@@ -26,6 +26,9 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] =
     useState<SectionId>("home");
+
+  const isProgrammaticScroll = useRef(false);
+  const scrollReleaseTimeout = useRef<number | null>(null);
 
   const content = homeContent[locale];
 
@@ -82,6 +85,10 @@ export default function Home() {
 
   useEffect(() => {
     const updateActiveSection = () => {
+      if (isProgrammaticScroll.current) {
+        return;
+      }
+
       const headerOffset = 120;
       let currentSection: SectionId = "home";
 
@@ -125,8 +132,28 @@ export default function Home() {
         "resize",
         updateActiveSection,
       );
+
+      if (scrollReleaseTimeout.current !== null) {
+        window.clearTimeout(scrollReleaseTimeout.current);
+      }
     };
   }, []);
+
+  const navigateToSection = (sectionId: SectionId) => {
+    setActiveSection(sectionId);
+    setIsMenuOpen(false);
+
+    isProgrammaticScroll.current = true;
+
+    if (scrollReleaseTimeout.current !== null) {
+      window.clearTimeout(scrollReleaseTimeout.current);
+    }
+
+    scrollReleaseTimeout.current = window.setTimeout(() => {
+      isProgrammaticScroll.current = false;
+      scrollReleaseTimeout.current = null;
+    }, 900);
+  };
 
   const changeLocale = (nextLocale: Locale) => {
     setLocale(nextLocale);
@@ -146,7 +173,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <a
               href="#home"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => navigateToSection("home")}
               className="text-sm font-semibold tracking-[0.3em] text-white"
             >
               OMNIA
@@ -158,6 +185,9 @@ export default function Home() {
                   <a
                     key={item.id}
                     href={`#${item.id}`}
+                    onClick={() =>
+                      navigateToSection(item.id)
+                    }
                     aria-current={
                       activeSection === item.id
                         ? "location"
@@ -253,7 +283,9 @@ export default function Home() {
                   <a
                     key={item.id}
                     href={`#${item.id}`}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() =>
+                      navigateToSection(item.id)
+                    }
                     aria-current={
                       activeSection === item.id
                         ? "location"
@@ -318,6 +350,7 @@ export default function Home() {
         <div className="mt-12 flex flex-col gap-4 sm:flex-row">
           <a
             href="#projects"
+            onClick={() => navigateToSection("projects")}
             className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
           >
             {content.hero.primaryAction}
@@ -325,6 +358,7 @@ export default function Home() {
 
           <a
             href="#lab"
+            onClick={() => navigateToSection("lab")}
             className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
           >
             {content.hero.secondaryAction}
@@ -381,7 +415,7 @@ export default function Home() {
         id="lab"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
-        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em]] text-zinc-500">
+        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           {content.lab.label}
         </p>
 
