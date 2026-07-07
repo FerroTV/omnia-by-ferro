@@ -2564,3 +2564,25 @@ Changes:
 
 Commit:
 - `d449810 Add multilingual contact content`
+
+## 2026-07-07 — Multilingual Footer content
+
+Added multilingual Footer content and automatic year rendering to the Omnia by Ferro homepage.
+
+Changes:
+- Extended `content/home.ts` with a Footer content structure.
+- Added English, German and Bulgarian credit text.
+- Connected the Footer credit in `app/page.tsx` to the active locale.
+- Kept the Omnia by Ferro copyright text language-independent.
+- Replaced the hardcoded year with `new Date().getFullYear()`.
+- Added `suppressHydrationWarning` to the dynamic year element.
+- Verified the Footer in English, German and Bulgarian.
+- Confirmed that the Footer layout remains stable on desktop and mobile sizes.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+
+Commit:
+- `493dbb6 Add multilingual footer content`
+
