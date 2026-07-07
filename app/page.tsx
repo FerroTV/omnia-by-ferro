@@ -246,13 +246,15 @@ const content = homeContent[locale];
           </div>
         </div>
       </section>
-            <footer className="mx-auto flex max-w-6xl flex-col gap-4 border-t border-zinc-900/80 px-6 py-10 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
-  <p className="tracking-wide">© 2026 Omnia by Ferro.</p>
+              <footer className="mx-auto flex max-w-6xl flex-col gap-4 border-t border-zinc-900/80 px-6 py-10 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
+        <p className="tracking-wide" suppressHydrationWarning>
+          © {new Date().getFullYear()} Omnia by Ferro.
+        </p>
 
-  <p className="tracking-wide text-zinc-500">
-    Built by Zhelyazko “Ferro” Zhelyazkov.
-  </p>
-</footer>
+        <p className="tracking-wide text-zinc-500">
+          {content.footer.credit}
+        </p>
+      </footer>
     </main>
   );
 }

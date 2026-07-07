@@ -56,6 +56,9 @@ type HomeContent = {
       external?: boolean;
     }[];
   };
+  footer: {
+  credit: string;
+};
 };
 
 export const homeContent: Record<Locale, HomeContent> = {
@@ -164,6 +167,9 @@ export const homeContent: Record<Locale, HomeContent> = {
         },
       ],
     },
+        footer: {
+      credit: "Built by Zhelyazko “Ferro” Zhelyazkov.",
+    },
   },
 
   de: {
@@ -270,6 +276,9 @@ export const homeContent: Record<Locale, HomeContent> = {
           external: true,
         },
       ],
+    },
+        footer: {
+      credit: "Erstellt von Zhelyazko „Ferro“ Zhelyazkov.",
     },
   },
 
@@ -382,6 +391,9 @@ export const homeContent: Record<Locale, HomeContent> = {
           external: true,
         },
       ],
+    },
+        footer: {
+      credit: "Създадено от Желязко „Ferro“ Желязков.",
     },
   },
 };
