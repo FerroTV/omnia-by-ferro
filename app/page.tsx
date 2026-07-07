@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { homeContent } from "@/content/home";
 import {
   defaultLocale,
@@ -8,9 +8,37 @@ import {
   type Locale,
 } from "@/lib/i18n";
 
+const LOCALE_STORAGE_KEY = "omnia-locale";
 export default function Home() {
-const [locale, setLocale] = useState<Locale>(defaultLocale);
-const content = homeContent[locale];
+  const [locale, setLocale] = useState<Locale>(defaultLocale);
+  const content = homeContent[locale];
+
+    useEffect(() => {
+    const savedLocale = window.localStorage.getItem(LOCALE_STORAGE_KEY);
+    const browserLocale = window.navigator.language.split("-")[0];
+
+    const initialLocale =
+      savedLocale && locales.includes(savedLocale as Locale)
+        ? (savedLocale as Locale)
+        : locales.includes(browserLocale as Locale)
+          ? (browserLocale as Locale)
+          : defaultLocale;
+
+    const timeoutId = window.setTimeout(() => {
+      setLocale(initialLocale);
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
+  const changeLocale = (nextLocale: Locale) => {
+    setLocale(nextLocale);
+    window.localStorage.setItem(LOCALE_STORAGE_KEY, nextLocale);
+  };
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_32%),linear-gradient(to_bottom,black,rgb(9,9,11)_45%,black)] text-zinc-100">
@@ -48,7 +76,7 @@ const content = homeContent[locale];
   <button
     key={availableLocale}
     type="button"
-    onClick={() => setLocale(availableLocale)}
+    onClick={() => changeLocale(availableLocale)}
     aria-pressed={availableLocale === locale}
     className={`rounded-full px-3 py-1.5 transition ${
       availableLocale === locale
