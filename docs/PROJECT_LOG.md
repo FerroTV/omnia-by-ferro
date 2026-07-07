@@ -2523,6 +2523,27 @@ Changes:
 
 Commit:
 - `4a93a49 Add multilingual lab content`
+## 2026-07-07 — Multilingual About content
+
+Added multilingual content for the About section of the Omnia by Ferro homepage.
+
+Changes:
+- Extended `content/home.ts` with an About content structure.
+- Added English, German and Bulgarian labels, names, paragraphs, statements and tags.
+- Replaced the hardcoded About content with data-driven rendering.
+- Used `.map()` to generate the About paragraphs and tag badges.
+- Connected the About section in `app/page.tsx` to the active locale.
+- Verified the About section in English, German and Bulgarian.
+- Confirmed that longer German and Bulgarian text does not break the layout.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+
+Commit:
+- `efde944 Add multilingual about content`
+
+
 
 
 
