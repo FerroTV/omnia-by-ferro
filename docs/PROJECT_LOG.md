@@ -2543,14 +2543,24 @@ Changes:
 Commit:
 - `efde944 Add multilingual about content`
 
+## 2026-07-07 — Multilingual Contact content
 
+Added multilingual content for the Contact section of the Omnia by Ferro homepage.
 
+Changes:
+- Extended `content/home.ts` with a Contact content structure.
+- Added English, German and Bulgarian labels, titles, descriptions, tags and link labels.
+- Replaced the hardcoded Contact content with data-driven rendering.
+- Used `.map()` to generate the Contact tags and links.
+- Preserved external-link behavior for GitHub and LinkedIn.
+- Preserved the email link behavior.
+- Connected the Contact section in `app/page.tsx` to the active locale.
+- Verified the Contact section in English, German and Bulgarian.
+- Confirmed that longer German and Bulgarian text does not break the layout.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
 
-
-
-
-
-
-
-
-
+Commit:
+- `d449810 Add multilingual contact content`
