@@ -11,6 +11,7 @@ import {
 const LOCALE_STORAGE_KEY = "omnia-locale";
 export default function Home() {
   const [locale, setLocale] = useState<Locale>(defaultLocale);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const content = homeContent[locale];
 
     useEffect(() => {
@@ -36,58 +37,182 @@ export default function Home() {
   }, [locale]);
 
   const changeLocale = (nextLocale: Locale) => {
-    setLocale(nextLocale);
-    window.localStorage.setItem(LOCALE_STORAGE_KEY, nextLocale);
-  };
+  setLocale(nextLocale);
+  window.localStorage.setItem(LOCALE_STORAGE_KEY, nextLocale);
+  setIsMenuOpen(false);
+};
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_32%),linear-gradient(to_bottom,black,rgb(9,9,11)_45%,black)] text-zinc-100">
-      <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/70 backdrop-blur-xl">
-  <nav className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-    <a
-      href="#"
-      className="text-sm font-semibold tracking-[0.3em] text-white"
-    >
-      OMNIA
-    </a>
+            <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/70 backdrop-blur-xl">
+        <nav className="mx-auto max-w-6xl px-6 py-4">
+          <div className="flex items-center justify-between">
+            <a
+              href="#"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-sm font-semibold tracking-[0.3em] text-white"
+            >
+              OMNIA
+            </a>
 
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-400">
-            <a href="#" className="transition hover:text-white">
-              {content.navigation.home}
-            </a>
-            <a href="#projects" className="transition hover:text-white">
-              {content.navigation.projects}
-            </a>
-            <a href="#lab" className="transition hover:text-white">
-              {content.navigation.lab}
-            </a>
-            <a href="#about" className="transition hover:text-white">
-              {content.navigation.about}
-            </a>
-            <a href="#contact" className="transition hover:text-white">
-              {content.navigation.contact}
-            </a>
+            <div className="hidden items-center gap-6 md:flex">
+              <div className="flex items-center gap-5 text-sm text-zinc-400">
+                <a href="#" className="transition hover:text-white">
+                  {content.navigation.home}
+                </a>
+
+                <a
+                  href="#projects"
+                  className="transition hover:text-white"
+                >
+                  {content.navigation.projects}
+                </a>
+
+                <a href="#lab" className="transition hover:text-white">
+                  {content.navigation.lab}
+                </a>
+
+                <a href="#about" className="transition hover:text-white">
+                  {content.navigation.about}
+                </a>
+
+                <a href="#contact" className="transition hover:text-white">
+                  {content.navigation.contact}
+                </a>
+              </div>
+
+              <div
+                aria-label="Language selector"
+                className="flex w-fit items-center rounded-full border border-zinc-800 bg-zinc-950/70 p-1 text-xs text-zinc-500"
+              >
+                {locales.map((availableLocale) => (
+                  <button
+                    key={availableLocale}
+                    type="button"
+                    onClick={() => changeLocale(availableLocale)}
+                    aria-pressed={availableLocale === locale}
+                    className={`rounded-full px-3 py-1.5 transition ${
+                      availableLocale === locale
+                        ? "bg-zinc-100 text-black"
+                        : "hover:text-white"
+                    }`}
+                  >
+                    {localeShortLabels[availableLocale]}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen((current) => !current)}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+              aria-label={
+                isMenuOpen
+                  ? content.navigation.close
+                  : content.navigation.menu
+              }
+              className="flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-950/70 px-4 py-2 text-sm text-zinc-300 transition hover:border-zinc-600 hover:text-white md:hidden"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                className="h-4 w-4"
+              >
+                {isMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    d="M6 6l12 12M18 6L6 18"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    d="M4 7h16M4 12h16M4 17h16"
+                  />
+                )}
+              </svg>
+
+              <span>
+                {isMenuOpen
+                  ? content.navigation.close
+                  : content.navigation.menu}
+              </span>
+            </button>
           </div>
-          <div
-  aria-label="Language selector"
-  className="flex w-fit items-center rounded-full border border-zinc-800 bg-zinc-950/70 p-1 text-xs text-zinc-500"
->
-  {locales.map((availableLocale) => (
-  <button
-    key={availableLocale}
-    type="button"
-    onClick={() => changeLocale(availableLocale)}
-    aria-pressed={availableLocale === locale}
-    className={`rounded-full px-3 py-1.5 transition ${
-      availableLocale === locale
-        ? "bg-zinc-100 text-black"
-        : "hover:text-white"
-    }`}
-  >
-    {localeShortLabels[availableLocale]}
-  </button>
-))}
-</div>
+
+          {isMenuOpen && (
+            <div
+              id="mobile-navigation"
+              className="mt-4 border-t border-zinc-900 pt-4 md:hidden"
+            >
+              <div className="flex flex-col gap-1 text-sm text-zinc-400">
+                <a
+                  href="#"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="rounded-xl px-3 py-3 transition hover:bg-zinc-900/70 hover:text-white"
+                >
+                  {content.navigation.home}
+                </a>
+
+                <a
+                  href="#projects"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="rounded-xl px-3 py-3 transition hover:bg-zinc-900/70 hover:text-white"
+                >
+                  {content.navigation.projects}
+                </a>
+
+                <a
+                  href="#lab"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="rounded-xl px-3 py-3 transition hover:bg-zinc-900/70 hover:text-white"
+                >
+                  {content.navigation.lab}
+                </a>
+
+                <a
+                  href="#about"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="rounded-xl px-3 py-3 transition hover:bg-zinc-900/70 hover:text-white"
+                >
+                  {content.navigation.about}
+                </a>
+
+                <a
+                  href="#contact"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="rounded-xl px-3 py-3 transition hover:bg-zinc-900/70 hover:text-white"
+                >
+                  {content.navigation.contact}
+                </a>
+              </div>
+
+              <div
+                aria-label="Language selector"
+                className="mt-4 flex w-fit items-center rounded-full border border-zinc-800 bg-zinc-950/70 p-1 text-xs text-zinc-500"
+              >
+                {locales.map((availableLocale) => (
+                  <button
+                    key={availableLocale}
+                    type="button"
+                    onClick={() => changeLocale(availableLocale)}
+                    aria-pressed={availableLocale === locale}
+                    className={`rounded-full px-3 py-1.5 transition ${
+                      availableLocale === locale
+                        ? "bg-zinc-100 text-black"
+                        : "hover:text-white"
+                    }`}
+                  >
+                    {localeShortLabels[availableLocale]}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </nav>
       </header>
 

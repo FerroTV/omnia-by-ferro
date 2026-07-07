@@ -14,12 +14,14 @@ type LabItem = {
 
 type HomeContent = {
   navigation: {
-    home: string;
-    projects: string;
-    lab: string;
-    about: string;
-    contact: string;
-  };
+  home: string;
+  projects: string;
+  lab: string;
+  about: string;
+  contact: string;
+  menu: string;
+  close: string;
+};
   hero: {
     badge: string;
     title: string;
@@ -69,6 +71,8 @@ export const homeContent: Record<Locale, HomeContent> = {
       lab: "Lab",
       about: "About",
       contact: "Contact",
+      menu: "Menu",
+      close: "Close"
     },
     hero: {
       badge: "by Ferro",
@@ -179,6 +183,8 @@ export const homeContent: Record<Locale, HomeContent> = {
       lab: "Labor",
       about: "Über mich",
       contact: "Kontakt",
+      menu: "Menü",
+      close: "Schließen",
     },
     hero: {
       badge: "by Ferro",
@@ -289,6 +295,8 @@ export const homeContent: Record<Locale, HomeContent> = {
       lab: "Лаборатория",
       about: "За мен",
       contact: "Контакт",
+      menu: "Меню",
+      close: "Затвори",
     },
     hero: {
       badge: "by Ferro",
