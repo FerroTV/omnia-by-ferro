@@ -1,8 +1,16 @@
+"use client";
+import { useState } from "react";
 import { homeContent } from "@/content/home";
-import { defaultLocale, localeShortLabels, locales } from "@/lib/i18n";
+import {
+  defaultLocale,
+  localeShortLabels,
+  locales,
+  type Locale,
+} from "@/lib/i18n";
 
 export default function Home() {
-  const content = homeContent[defaultLocale];
+const [locale, setLocale] = useState<Locale>(defaultLocale);
+const content = homeContent[locale];
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_32%),linear-gradient(to_bottom,black,rgb(9,9,11)_45%,black)] text-zinc-100">
@@ -36,20 +44,21 @@ export default function Home() {
   aria-label="Language selector"
   className="flex w-fit items-center rounded-full border border-zinc-800 bg-zinc-950/70 p-1 text-xs text-zinc-500"
 >
-  {locales.map((locale) => (
-    <button
-      key={locale}
-      type="button"
-      aria-pressed={locale === defaultLocale}
-      className={`rounded-full px-3 py-1.5 transition ${
-        locale === defaultLocale
-          ? "bg-zinc-100 text-black"
-          : "hover:text-white"
-      }`}
-    >
-      {localeShortLabels[locale]}
-    </button>
-  ))}
+  {locales.map((availableLocale) => (
+  <button
+    key={availableLocale}
+    type="button"
+    onClick={() => setLocale(availableLocale)}
+    aria-pressed={availableLocale === locale}
+    className={`rounded-full px-3 py-1.5 transition ${
+      availableLocale === locale
+        ? "bg-zinc-100 text-black"
+        : "hover:text-white"
+    }`}
+  >
+    {localeShortLabels[availableLocale]}
+  </button>
+))}
 </div>
         </nav>
       </header>
