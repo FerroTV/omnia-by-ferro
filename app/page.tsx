@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Reveal from "@/components/Reveal";
 import { homeContent } from "@/content/home";
 import {
   defaultLocale,
@@ -335,35 +336,39 @@ export default function Home() {
         id="home"
         className="mx-auto flex min-h-[calc(100vh-97px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16"
       >
-        <p className="mb-6 w-fit rounded-full border border-zinc-800 bg-zinc-950/70 px-4 py-2 text-xs uppercase tracking-[0.4em] text-zinc-400 shadow-2xl shadow-white/5">
-          {content.hero.badge}
-        </p>
+        <Reveal>
+          <p className="mb-6 w-fit rounded-full border border-zinc-800 bg-zinc-950/70 px-4 py-2 text-xs uppercase tracking-[0.4em] text-zinc-400 shadow-2xl shadow-white/5">
+            {content.hero.badge}
+          </p>
 
-        <h1 className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl">
-          {content.hero.title}
-        </h1>
+          <h1 className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl">
+            {content.hero.title}
+          </h1>
 
-        <p className="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
-          {content.hero.description}
-        </p>
+          <p className="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
+            {content.hero.description}
+          </p>
 
-        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-          <a
-            href="#projects"
-            onClick={() => navigateToSection("projects")}
-            className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
-          >
-            {content.hero.primaryAction}
-          </a>
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#projects"
+              onClick={() =>
+                navigateToSection("projects")
+              }
+              className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
+            >
+              {content.hero.primaryAction}
+            </a>
 
-          <a
-            href="#lab"
-            onClick={() => navigateToSection("lab")}
-            className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
-          >
-            {content.hero.secondaryAction}
-          </a>
-        </div>
+            <a
+              href="#lab"
+              onClick={() => navigateToSection("lab")}
+              className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
+            >
+              {content.hero.secondaryAction}
+            </a>
+          </div>
+        </Reveal>
       </section>
 
       <section
