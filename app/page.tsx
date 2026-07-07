@@ -63,18 +63,17 @@ const content = homeContent[locale];
         </nav>
       </header>
 
-      <section className="mx-auto flex min-h-[calc(100vh-97px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16">
+            <section className="mx-auto flex min-h-[calc(100vh-97px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16">
         <p className="mb-6 w-fit rounded-full border border-zinc-800 bg-zinc-950/70 px-4 py-2 text-xs uppercase tracking-[0.4em] text-zinc-400 shadow-2xl shadow-white/5">
-  by Ferro
-</p>
+          {content.hero.badge}
+        </p>
 
         <h1 className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl">
-  OMNIA
-</h1>
+          {content.hero.title}
+        </h1>
 
         <p className="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
-          A personal digital space for projects, ideas, code, art and
-          experiments.
+          {content.hero.description}
         </p>
 
         <div className="mt-12 flex flex-col gap-4 sm:flex-row">
@@ -82,13 +81,14 @@ const content = homeContent[locale];
             href="#projects"
             className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
           >
-            Explore Projects
+            {content.hero.primaryAction}
           </a>
 
           <a
             href="#lab"
-className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"          >
-            Enter the Lab
+            className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
+          >
+            {content.hero.secondaryAction}
           </a>
         </div>
       </section>
