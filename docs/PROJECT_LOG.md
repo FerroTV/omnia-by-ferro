@@ -2586,3 +2586,33 @@ Changes:
 Commit:
 - `493dbb6 Add multilingual footer content`
 
+## 2026-07-08 — Navigation polish and active section synchronization
+
+Completed a navigation polish block for the Omnia by Ferro homepage.
+
+Changes:
+- Added smooth scrolling between homepage sections.
+- Added scroll offset so section headings remain visible below the sticky header.
+- Added active section highlighting in the desktop navigation.
+- Added active section highlighting in the mobile navigation.
+- Added a real `home` section anchor.
+- Synchronized the active navigation state with clicked links during smooth scrolling.
+- Prevented the active state from jumping through intermediate sections during programmatic scrolling.
+- Preserved automatic active-section detection during normal manual scrolling.
+- Kept the mobile menu closing behavior after selecting a section.
+- Fixed the site background so the dark visual identity remains consistent regardless of the operating system color scheme.
+- Added reduced-motion support for users who disable animations.
+- Installed Tailwind CSS IntelliSense in Visual Studio Code to recognize Tailwind-specific CSS directives such as `@theme`.
+
+Verification:
+- Tested navigation locally on desktop and mobile layouts.
+- Verified direct navigation from Home to Contact.
+- Confirmed that the active state remains synchronized with the selected section.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Verified both updates on the live Vercel deployment.
+
+Commits:
+- `dc953df Polish navigation scrolling and active states`
+- `f745fe0 Synchronize active navigation during smooth scroll`
+
