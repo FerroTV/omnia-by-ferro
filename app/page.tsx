@@ -93,83 +93,46 @@ const content = homeContent[locale];
         </div>
       </section>
 
-      <section
+            <section
         id="projects"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
         <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
-          Projects
+          {content.projects.label}
         </p>
 
         <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-          Built work, learning paths and digital systems.
+          {content.projects.title}
         </h2>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
-            <p className="text-sm text-zinc-500">Software Project</p>
-            <h3 className="mt-4 text-xl font-medium text-white">
-              CRM Integration
-            </h3>
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
-              Outlook and calendar integration for a PHP-based CRM system,
-              focused on reducing media breaks and documenting communication.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                PHP
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Microsoft Graph
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                CRM
-              </span>
-            </div>
-          </article>
+          {content.projects.items.map((project) => (
+            <article
+              key={project.title}
+              className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70"
+            >
+              <p className="text-sm text-zinc-500">{project.category}</p>
 
-          <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
-            <p className="text-sm text-zinc-500">Learning Project</p>
-            <h3 className="mt-4 text-xl font-medium text-white">SSI App</h3>
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
-              Educational Angular application with interactive sections for
-              children, created as a learning project with planets, quizzes and
-              playful content.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Angular
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                TypeScript
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Learning App
-              </span>
-            </div>
-          </article>
+              <h3 className="mt-4 text-xl font-medium text-white">
+                {project.title}
+              </h3>
 
-          <article className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70">
-            <p className="text-sm text-zinc-500">Portfolio System</p>
-            <h3 className="mt-4 text-xl font-medium text-white">
-              Omnia by Ferro
-            </h3>
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
-              Personal digital space, portfolio and creative archive for code,
-              AI concepts, visual experiments and future digital systems.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Next.js
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Tailwind CSS
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Portfolio
-              </span>
-            </div>
-          </article>
+              <p className="mt-4 text-sm leading-6 text-zinc-400">
+                {project.description}
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-zinc-800 px-3 py-1"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
