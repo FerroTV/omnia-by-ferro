@@ -7,6 +7,11 @@ type ProjectItem = {
   tags: string[];
 };
 
+type LabItem = {
+  title: string;
+  description: string;
+};
+
 type HomeContent = {
   navigation: {
     home: string;
@@ -26,6 +31,12 @@ type HomeContent = {
     label: string;
     title: string;
     items: ProjectItem[];
+  };
+  lab: {
+    label: string;
+    title: string;
+    description: string;
+    items: LabItem[];
   };
 };
 
@@ -70,6 +81,34 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Personal digital space, portfolio and creative archive for code, AI concepts, visual experiments and future digital systems.",
           tags: ["Next.js", "Tailwind CSS", "Portfolio"],
+        },
+      ],
+    },
+    lab: {
+      label: "Lab",
+      title: "Experiments, prototypes and unfinished ideas.",
+      description:
+        "The Lab is the experimental part of Omnia — a place for AI concepts, interface ideas, visual tests and future prototypes before they become finished projects.",
+      items: [
+        {
+          title: "AI Concepts",
+          description:
+            "Ideas for intelligent systems, digital memory, learning flows and future assistant behavior.",
+        },
+        {
+          title: "Interface Experiments",
+          description:
+            "Small tests around navigation, interaction, visual hierarchy and minimal user interfaces.",
+        },
+        {
+          title: "Visual Prototypes",
+          description:
+            "Experimental layouts, motion ideas, art direction tests and visual identity explorations.",
+        },
+        {
+          title: "Future Systems",
+          description:
+            "Early thoughts about tools, personal platforms and digital systems that may become full projects later.",
         },
       ],
     },
@@ -118,6 +157,34 @@ export const homeContent: Record<Locale, HomeContent> = {
         },
       ],
     },
+    lab: {
+      label: "Labor",
+      title: "Experimente, Prototypen und unfertige Ideen.",
+      description:
+        "Das Labor ist der experimentelle Teil von Omnia — ein Ort für KI-Konzepte, Interface-Ideen, visuelle Tests und zukünftige Prototypen, bevor daraus fertige Projekte werden.",
+      items: [
+        {
+          title: "KI-Konzepte",
+          description:
+            "Ideen für intelligente Systeme, digitales Gedächtnis, Lernprozesse und das zukünftige Verhalten von Assistenten.",
+        },
+        {
+          title: "Interface-Experimente",
+          description:
+            "Kleine Tests zu Navigation, Interaktion, visueller Hierarchie und minimalistischen Benutzeroberflächen.",
+        },
+        {
+          title: "Visuelle Prototypen",
+          description:
+            "Experimentelle Layouts, Bewegungsideen, Art-Direction-Tests und Erkundungen visueller Identitäten.",
+        },
+        {
+          title: "Zukünftige Systeme",
+          description:
+            "Frühe Gedanken zu Werkzeugen, persönlichen Plattformen und digitalen Systemen, die später zu vollständigen Projekten werden können.",
+        },
+      ],
+    },
   },
 
   bg: {
@@ -160,6 +227,34 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Лично дигитално пространство, портфолио и творчески архив за код, концепции с изкуствен интелект, визуални експерименти и бъдещи дигитални системи.",
           tags: ["Next.js", "Tailwind CSS", "Портфолио"],
+        },
+      ],
+    },
+    lab: {
+      label: "Лаборатория",
+      title: "Експерименти, прототипи и незавършени идеи.",
+      description:
+        "Лабораторията е експерименталната част на Omnia — място за концепции с изкуствен интелект, идеи за интерфейси, визуални тестове и бъдещи прототипи, преди да се превърнат в завършени проекти.",
+      items: [
+        {
+          title: "Концепции с изкуствен интелект",
+          description:
+            "Идеи за интелигентни системи, дигитална памет, процеси на обучение и бъдещо поведение на асистенти.",
+        },
+        {
+          title: "Интерфейсни експерименти",
+          description:
+            "Малки тестове с навигация, взаимодействие, визуална йерархия и минималистични потребителски интерфейси.",
+        },
+        {
+          title: "Визуални прототипи",
+          description:
+            "Експериментални оформления, идеи за движение, тестове на художествената посока и проучвания на визуална идентичност.",
+        },
+        {
+          title: "Бъдещи системи",
+          description:
+            "Ранни идеи за инструменти, лични платформи и дигитални системи, които по-късно могат да се превърнат в цялостни проекти.",
         },
       ],
     },

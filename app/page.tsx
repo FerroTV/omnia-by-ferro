@@ -136,56 +136,36 @@ const content = homeContent[locale];
         </div>
       </section>
 
-      <section
+            <section
         id="lab"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
         <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
-          Lab
+          {content.lab.label}
         </p>
 
         <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-          Experiments, prototypes and unfinished ideas.
+          {content.lab.title}
         </h2>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-          The Lab is the experimental part of Omnia — a place for AI concepts,
-          interface ideas, visual tests and future prototypes before they become
-          finished projects.
+          {content.lab.description}
         </p>
+
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
-  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
-    <h3 className="text-sm font-medium text-white">AI Concepts</h3>
-    <p className="mt-3 text-sm leading-6 text-zinc-500">
-      Ideas for intelligent systems, digital memory, learning flows and
-      future assistant behavior.
-    </p>
-  </div>
+          {content.lab.items.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5"
+            >
+              <h3 className="text-sm font-medium text-white">{item.title}</h3>
 
-  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
-    <h3 className="text-sm font-medium text-white">Interface Experiments</h3>
-    <p className="mt-3 text-sm leading-6 text-zinc-500">
-      Small tests around navigation, interaction, visual hierarchy and
-      minimal user interfaces.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
-    <h3 className="text-sm font-medium text-white">Visual Prototypes</h3>
-    <p className="mt-3 text-sm leading-6 text-zinc-500">
-      Experimental layouts, motion ideas, art direction tests and visual
-      identity explorations.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5">
-    <h3 className="text-sm font-medium text-white">Future Systems</h3>
-    <p className="mt-3 text-sm leading-6 text-zinc-500">
-      Early thoughts about tools, personal platforms and digital systems
-      that may become full projects later.
-    </p>
-  </div>
-</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-500">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section
