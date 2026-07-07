@@ -168,54 +168,35 @@ const content = homeContent[locale];
         </div>
       </section>
 
-      <section
+            <section
         id="about"
         className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
       >
         <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
-          About
+          {content.about.label}
         </p>
 
         <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-            Zhelyazko “Ferro” Zhelyazkov.
+            {content.about.name}
           </h2>
 
           <div className="space-y-6 text-lg leading-8 text-zinc-400">
-            <p>
-              I am building Omnia as a personal digital space where software
-              development, AI concepts, visual experiments and learning paths can
-              live together.
-            </p>
+            {content.about.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
 
-            <p>
-              This website is not meant to be only a portfolio. It is also a
-              growing archive of ideas, prototypes, unfinished thoughts and
-              systems that may become something bigger over time.
-            </p>
+            <p className="text-zinc-300">{content.about.statement}</p>
 
-            <p>
-              My focus is on clean digital products, thoughtful interfaces,
-              practical learning and the connection between technology and
-              creativity.
-            </p>
-
-            <p className="text-zinc-300">
-              Omnia is the space. Ferro is the signature.
-            </p>
             <div className="flex flex-wrap gap-2 pt-2 text-xs text-zinc-500">
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Software
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                AI Concepts
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Interfaces
-              </span>
-              <span className="rounded-full border border-zinc-800 px-3 py-1">
-                Creative Systems
-              </span>
+              {content.about.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-zinc-800 px-3 py-1"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
