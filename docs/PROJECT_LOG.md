@@ -2439,7 +2439,26 @@ Changes:
 Commit:
 - `43736b5 Add visual language selector`
 
+## 2026-07-07 — Interactive language switching
 
+Added the first working language-switching behavior to the Omnia by Ferro website.
+
+Changes:
+- Converted `app/page.tsx` into a client component.
+- Added React `useState` for the active locale.
+- Connected the selected locale to `homeContent`.
+- Added click behavior to the EN / DE / BG selector.
+- Updated the active visual state when the selected language changes.
+- Navigation labels now switch between English, German and Bulgarian.
+- Language switching currently affects the navigation only.
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Committed and pushed the changes to GitHub.
+- Verified that Vercel deployed the update successfully.
+- Confirmed that language switching works on the live website.
+
+Commit:
+- `9224e19 Add interactive language switching`
 
 
 
