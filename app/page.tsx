@@ -1,4 +1,5 @@
 "use client";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
@@ -11,6 +12,13 @@ import {
 } from "@/lib/i18n";
 
 const LOCALE_STORAGE_KEY = "omnia-locale";
+const OmniaScene = dynamic(
+  () => import("@/components/three/OmniaScene"),
+  {
+    ssr: false,
+    loading: () => null,
+  },
+);
 
 const SECTION_IDS = [
   "home",
@@ -168,7 +176,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_32%),linear-gradient(to_bottom,black,rgb(9,9,11)_45%,black)] text-zinc-100">
+    <main className="min-h-screen bg-black text-zinc-100">
       <header className="sticky top-0 z-50 border-b border-zinc-900 bg-black/70 backdrop-blur-xl">
         <nav className="mx-auto max-w-6xl px-6 py-4">
           <div className="flex items-center justify-between">
@@ -333,64 +341,92 @@ export default function Home() {
       </header>
 
       <section
-        id="home"
-        className="mx-auto flex min-h-[calc(100vh-97px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16"
-      >
-        <Reveal>
-          <p className="mb-6 w-fit rounded-full border border-zinc-800 bg-zinc-950/70 px-4 py-2 text-xs uppercase tracking-[0.4em] text-zinc-400 shadow-2xl shadow-white/5">
-            {content.hero.badge}
-          </p>
+  id="home"
+  className="relative isolate min-h-[calc(100vh-65px)] overflow-hidden bg-black sm:min-h-screen"
+>
+  <div
+    aria-hidden="true"
+    className="absolute inset-0 z-0"
+  >
+    <OmniaScene />
+  </div>
 
-          <h1
-            aria-label={content.hero.title}
-            className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl"
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-1 bg-[linear-gradient(90deg,rgba(0,0,0,0.98)_0%,rgba(0,0,0,0.9)_30%,rgba(0,0,0,0.48)_52%,rgba(0,0,0,0.08)_76%,rgba(0,0,0,0.22)_100%)]"
+  />
+
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-2 bg-[radial-gradient(circle_at_65%_45%,transparent_0%,rgba(0,0,0,0.12)_42%,rgba(0,0,0,0.55)_100%)]"
+  />
+
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-x-0 bottom-0 z-3 h-64 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0.18)_28%,rgba(0,0,0,0.52)_58%,rgba(0,0,0,0.86)_82%,#000_100%)] sm:h-80"
+  />
+
+  <div className="pointer-events-none relative z-10 mx-auto flex min-h-[calc(100vh-65px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16">
+    <Reveal>
+      <div className="max-w-3xl">
+        <p className="mb-6 w-fit rounded-full border border-zinc-800 bg-black/60 px-4 py-2 text-xs uppercase tracking-[0.4em] text-zinc-400 shadow-2xl shadow-black/40 backdrop-blur-sm">
+          {content.hero.badge}
+        </p>
+
+        <h1
+          aria-label={content.hero.title}
+          className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl"
+        >
+          {Array.from(content.hero.title).map(
+            (letter, index) => (
+              <span
+                key={`${letter}-${index}`}
+                aria-hidden="true"
+                className="omnia-hero-watercolor-letter"
+                style={{
+                  animationDelay: `${300 + index * 140}ms`,
+                }}
+              >
+                {letter}
+              </span>
+            ),
+          )}
+        </h1>
+
+        <p className="mt-8 max-w-2xl text-xl leading-8 text-zinc-300">
+          {content.hero.description}
+        </p>
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="#projects"
+            onClick={() =>
+              navigateToSection("projects")
+            }
+            className="pointer-events-auto rounded-full border border-zinc-700 bg-black/65 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
           >
-            {Array.from(content.hero.title).map(
-              (letter, index) => (
-                <span
-                  key={`${letter}-${index}`}
-                  aria-hidden="true"
-                  className="omnia-hero-watercolor-letter"
-                  style={{
-                    animationDelay: `${300 + index * 140}ms`,
-                  }}
-                >
-                  {letter}
-                </span>
-              ),
-            )}
-          </h1>
+            {content.hero.primaryAction}
+          </a>
 
-          <p className="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
-            {content.hero.description}
-          </p>
-
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#projects"
-              onClick={() =>
-                navigateToSection("projects")
-              }
-              className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
-            >
-              {content.hero.primaryAction}
-            </a>
-
-            <a
-              href="#lab"
-              onClick={() => navigateToSection("lab")}
-              className="rounded-full border border-zinc-700 bg-zinc-950/60 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
-            >
-              {content.hero.secondaryAction}
-            </a>
-          </div>
-        </Reveal>
-      </section>
+          <a
+            href="#lab"
+            onClick={() =>
+              navigateToSection("lab")
+            }
+            className="pointer-events-auto rounded-full border border-zinc-700 bg-black/65 px-6 py-3 text-sm font-medium text-zinc-100 shadow-2xl shadow-black/40 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300 hover:bg-zinc-100 hover:text-black"
+          >
+            {content.hero.secondaryAction}
+          </a>
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>
 
       <section
-        id="projects"
-        className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
-      >
+      id="projects"
+      className="mx-auto max-w-6xl px-6 py-24"
+    >
         <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           {content.projects.label}
         </p>
