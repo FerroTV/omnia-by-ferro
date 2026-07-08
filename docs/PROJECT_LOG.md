@@ -2667,3 +2667,12 @@ Verification:
 Commits:
 - `8134bac Add interactive liquid metal hero`
 - `8e14a82 Optimize liquid metal hero for mobile`
+
+## 2026-07-08 - Animated projects timeline
+
+- Replaced the previous project cards with a responsive animated timeline.
+- Project titles, metadata, links and translations reuse the existing multilingual content.
+- Added horizontal desktop and vertical mobile layouts.
+- Added progressive line, connector and project-marker reveal animations.
+- Preserved accessible project links and reduced-motion support.
+- Added the approved prototype route at `/lab/projects-timeline`.

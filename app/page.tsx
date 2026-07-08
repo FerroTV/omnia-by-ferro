@@ -1,6 +1,6 @@
 "use client";
+import ProjectsTimeline from "@/components/ProjectsTimeline";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
 import { homeContent } from "@/content/home";
@@ -423,80 +423,12 @@ export default function Home() {
   </div>
 </section>
 
-      <section
-      id="projects"
-      className="mx-auto max-w-6xl px-6 py-24"
-    >
-        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
-          {content.projects.label}
-        </p>
-
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-          {content.projects.title}
-        </h2>
-
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {content.projects.items.map((project) => {
-  const cardContent = (
-    <>
-      <p className="text-sm text-zinc-500">
-        {project.category}
-      </p>
-
-      <h3 className="mt-4 text-xl font-medium text-white">
-        {project.title}
-      </h3>
-
-      <p className="mt-4 text-sm leading-6 text-zinc-400">
-        {project.description}
-      </p>
-
-      <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full border border-zinc-800 px-3 py-1"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      {project.href && (
-        <p className="mt-8 flex items-center gap-2 text-sm text-zinc-300 transition group-hover:text-white">
-          View case study
-          <span
-            aria-hidden="true"
-            className="transition group-hover:translate-x-1"
-          >
-            →
-          </span>
-        </p>
-      )}
-    </>
-  );
-
-  return (
-    <article
-      key={project.title}
-      className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70"
-    >
-      {project.href ? (
-        <Link
-          href={project.href}
-          className="block h-full"
-        >
-          {cardContent}
-        </Link>
-      ) : (
-        cardContent
-      )}
-    </article>
-  );
-})}
-
-        </div>
-      </section>
+      <ProjectsTimeline
+  label={content.projects.label}
+  title={content.projects.title}
+  items={content.projects.items}
+  locale={locale}
+/>
 
       <section
         id="lab"
