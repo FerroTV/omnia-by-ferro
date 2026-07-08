@@ -101,6 +101,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Educational Angular application with interactive sections for children, created as a learning project with planets, quizzes and playful content.",
           tags: ["Angular", "TypeScript", "Learning App"],
+          href: "/projects/ssi-app",
         },
         {
           category: "Portfolio System",
@@ -214,6 +215,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Eine pädagogische Angular-Anwendung mit interaktiven Bereichen für Kinder, entwickelt als Lernprojekt mit Planeten, Quizzen und spielerischen Inhalten.",
           tags: ["Angular", "TypeScript", "Lern-App"],
+          href: "/projects/ssi-app",
         },
         {
           category: "Portfoliosystem",
@@ -327,6 +329,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Образователно Angular приложение с интерактивни секции за деца, създадено като учебен проект с планети, тестове и игрово съдържание.",
           tags: ["Angular", "TypeScript", "Образователно приложение"],
+          href: "/projects/ssi-app",
         },
         {
           category: "Портфолио система",

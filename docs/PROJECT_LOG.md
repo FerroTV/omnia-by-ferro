@@ -2623,3 +2623,10 @@ Commits:
 - Connected the CRM project card on the homepage to the new case study route.
 - Added project links to the multilingual content structure.
 - Added VS Code workspace settings for Tailwind CSS syntax support.
+
+## 2026-07-08 — SSI App case study
+
+- Added a complete case study page for the SSI App learning project.
+- Documented the project overview, solution, application structure, technical foundation, outcome, key decisions and lessons learned.
+- Connected the SSI App project card on the homepage to the new case study route.
+
