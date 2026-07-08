@@ -368,7 +368,7 @@ export default function Home() {
 
   <div className="pointer-events-none relative z-10 mx-auto flex min-h-[calc(100vh-65px)] max-w-6xl flex-col justify-center px-6 py-12 sm:min-h-screen sm:py-16">
     <Reveal>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl -translate-y-10 transform-gpu sm:translate-y-0">
         <p className="mb-6 w-fit rounded-full border border-zinc-800 bg-black/60 px-4 py-2 text-xs uppercase tracking-[0.4em] text-zinc-400 shadow-2xl shadow-black/40 backdrop-blur-sm">
           {content.hero.badge}
         </p>

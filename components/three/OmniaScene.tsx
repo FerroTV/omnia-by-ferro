@@ -4,7 +4,11 @@ import {
   Environment,
   Lightformer,
 } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
+import {
+  Canvas,
+  useFrame,
+  useThree,
+} from "@react-three/fiber";
 import {
   MathUtils,
   MeshPhysicalMaterial,
@@ -34,6 +38,8 @@ type LiquidBall = {
 };
 
 function LiquidMetalBlob() {
+    const { size } = useThree();
+  const isMobile = size.width < 640;
   const pointerActive = useRef(false);
 
   const pointerPosition = useRef(
@@ -274,7 +280,14 @@ function LiquidMetalBlob() {
   });
 
   return (
-    <group position={[1.35, 0, 0]}>
+    <group
+  position={
+  isMobile
+    ? [1.8, 1.35, 0]
+    : [1.35, 0, 0]
+}
+scale={isMobile ? 0.54 : 1}
+>
       <primitive object={liquidSurface} />
 
       <mesh
