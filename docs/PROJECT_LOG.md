@@ -2638,3 +2638,32 @@ Commits:
 
 
 
+
+## 2026-07-08 - Interactive liquid-metal Hero
+
+Completed the first major interactive 3D experience for the Omnia by Ferro homepage.
+
+Changes:
+- Installed Three.js, React Three Fiber and Drei.
+- Created an isolated 3D prototype route at `/lab/omnia-scene`.
+- Built an interactive liquid-metal surface using Marching Cubes.
+- Added cursor-based repulsion that breaks the surface into metallic droplets.
+- Added slow spring-based reassembly after the pointer moves away.
+- Improved the mercury appearance with physical materials, environment reflections, dithering and higher rendering resolution.
+- Expanded the scene into a full-screen Hero background behind the existing interface.
+- Preserved the multilingual Hero content, animated title, navigation and interactive buttons.
+- Removed the visible background boundary between the Hero and Projects sections.
+- Added separate mobile positioning and scaling for the liquid-metal object.
+- Verified the Hero at 360x800, 390x844 and 430x932 mobile viewport sizes.
+
+Verification:
+- Ran `npm run lint` successfully.
+- Ran `npm run build` successfully.
+- Ran `git diff --check` with no blocking issues.
+- Verified the desktop and mobile versions locally.
+- Pushed both completed work blocks to GitHub.
+- Verified the updated live Vercel deployment.
+
+Commits:
+- `8134bac Add interactive liquid metal hero`
+- `8e14a82 Optimize liquid metal hero for mobile`
