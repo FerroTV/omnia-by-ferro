@@ -41,3 +41,64 @@ section[id] {
     scroll-behavior: auto;
   }
 }
+
+.omnia-hero-watercolor-letter {
+  display: inline-block;
+  color: white;
+  will-change: color, text-shadow;
+  animation: omnia-letter-watercolor 4.8s ease-in-out both;
+}
+
+.omnia-hero-watercolor-letter:nth-child(1) {
+  --omnia-letter-color: #ff8fb3;
+  --omnia-letter-glow: rgba(255, 143, 179, 0.4);
+}
+
+.omnia-hero-watercolor-letter:nth-child(2) {
+  --omnia-letter-color: #ffc477;
+  --omnia-letter-glow: rgba(255, 196, 119, 0.4);
+}
+
+.omnia-hero-watercolor-letter:nth-child(3) {
+  --omnia-letter-color: #9de0b5;
+  --omnia-letter-glow: rgba(157, 224, 181, 0.4);
+}
+
+.omnia-hero-watercolor-letter:nth-child(4) {
+  --omnia-letter-color: #82cfff;
+  --omnia-letter-glow: rgba(130, 207, 255, 0.4);
+}
+
+.omnia-hero-watercolor-letter:nth-child(5) {
+  --omnia-letter-color: #c89cff;
+  --omnia-letter-glow: rgba(200, 156, 255, 0.4);
+}
+
+@keyframes omnia-letter-watercolor {
+  0%,
+  12% {
+    color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+
+  32%,
+  72% {
+    color: var(--omnia-letter-color);
+    text-shadow:
+      0 0 10px var(--omnia-letter-glow),
+      0 0 26px var(--omnia-letter-glow);
+  }
+
+  100% {
+    color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .omnia-hero-watercolor-letter {
+    color: white;
+    text-shadow: none;
+    animation: none;
+  }
+}

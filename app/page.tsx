@@ -341,8 +341,24 @@ export default function Home() {
             {content.hero.badge}
           </p>
 
-          <h1 className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl">
-            {content.hero.title}
+          <h1
+            aria-label={content.hero.title}
+            className="text-6xl font-semibold tracking-[-0.08em] text-white sm:text-8xl"
+          >
+            {Array.from(content.hero.title).map(
+              (letter, index) => (
+                <span
+                  key={`${letter}-${index}`}
+                  aria-hidden="true"
+                  className="omnia-hero-watercolor-letter"
+                  style={{
+                    animationDelay: `${300 + index * 140}ms`,
+                  }}
+                >
+                  {letter}
+                </span>
+              ),
+            )}
           </h1>
 
           <p className="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
