@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function SsiAppPage() {
+export default function OmniaByFerroPage() {
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent_28%),linear-gradient(to_bottom,black,rgb(9,9,11)_55%,black)] px-6 py-10 text-zinc-100">
       <div className="mx-auto max-w-6xl">
@@ -14,26 +14,27 @@ export default function SsiAppPage() {
 
         <section className="py-20 sm:py-28">
           <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">
-            Case Study · Learning Project
+            Case Study · Portfolio System
           </p>
 
           <h1 className="mt-6 max-w-5xl text-5xl font-semibold tracking-tighter text-white sm:text-7xl">
-            Solar System App
+            Omnia by Ferro
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400 sm:text-xl">
-            An educational Angular application for children with
-            interactive sections, playful content, quizzes and a
-            space-inspired visual direction.
+            A multilingual personal portfolio, creative archive and
+            experimental digital space built to bring projects, ideas,
+            code, visual concepts and future systems into one evolving
+            platform.
           </p>
 
           <div className="mt-12 flex flex-wrap gap-3 text-xs text-zinc-400">
             {[
-              "Angular",
+              "Next.js",
+              "React",
               "TypeScript",
-              "Responsive Design",
-              "Educational UI",
-              "Standalone Components",
+              "Tailwind CSS",
+              "Multilingual UI",
             ].map((technology) => (
               <span
                 key={technology}
@@ -51,7 +52,7 @@ export default function SsiAppPage() {
               </p>
 
               <p className="mt-3 text-zinc-300">
-                Educational web application
+                Personal portfolio system
               </p>
             </div>
 
@@ -61,17 +62,17 @@ export default function SsiAppPage() {
               </p>
 
               <p className="mt-3 text-zinc-300">
-                Frontend development
+                Design and development
               </p>
             </div>
 
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-zinc-600">
-                Duration
+                Status
               </p>
 
               <p className="mt-3 text-zinc-300">
-                80 hours
+                Ongoing
               </p>
             </div>
           </div>
@@ -91,10 +92,10 @@ export default function SsiAppPage() {
         </h2>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-          The project required the creation of an educational web
-          application that introduces children to the Solar System
-          through clear information, interactive sections and playful
-          activities.
+          I needed a personal platform that could present completed
+          projects professionally while also leaving space for
+          experiments, unfinished ideas, AI concepts and future digital
+          systems.
         </p>
       </div>
 
@@ -104,10 +105,9 @@ export default function SsiAppPage() {
         </h2>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-          The goal was to build a responsive Angular application that
-          combines learning content, planet exploration, quizzes,
-          videos and entertaining elements in one accessible digital
-          experience.
+          The goal was to build a multilingual and expandable digital
+          space that works as a portfolio, creative archive and personal
+          identity system under the name Omnia by Ferro.
         </p>
       </div>
     </div>
@@ -123,37 +123,37 @@ export default function SsiAppPage() {
 
     <div>
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-        A playful learning experience built with Angular
+        One flexible system for projects, ideas and experiments
       </h2>
 
       <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-        The application was structured as a responsive single-page
-        experience with dedicated sections for exploring planets,
-        watching educational content, solving quizzes and discovering
-        playful facts about the Solar System.
+        Omnia was designed as a modular portfolio system rather than a
+        static presentation page. The structure combines project case
+        studies, experimental content, multilingual navigation and a
+        visual identity that can grow with future work.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         {[
           {
-            title: "Planet exploration",
+            title: "Project case studies",
             description:
-              "Children can discover the planets through clear information, visual hierarchy and accessible navigation.",
+              "Completed work is presented through dedicated pages with context, technical decisions, outcomes and lessons learned.",
           },
           {
-            title: "Interactive quizzes",
+            title: "Multilingual content",
             description:
-              "Quiz sections reinforce the learning content through simple questions and immediate interaction.",
+              "The main interface supports English, German and Bulgarian with persistent language selection.",
           },
           {
-            title: "Educational videos",
+            title: "Experimental space",
             description:
-              "Video content supports the written information and provides another way to explore the Solar System.",
+              "The Lab provides room for unfinished ideas, AI concepts, interface tests and future prototypes.",
           },
           {
-            title: "Playful content",
+            title: "Expandable structure",
             description:
-              "Fun facts and child-friendly elements make the learning experience feel lighter and more engaging.",
+              "The project architecture allows new pages, sections and future administration features to be added without rebuilding the entire site.",
           },
         ].map((item) => (
           <article
@@ -164,7 +164,74 @@ export default function SsiAppPage() {
               {item.title}
             </h3>
 
-            <p className="mt-4 text-sm leading-6 text-zinc-400">
+            <p className="mt-4 text-sm leading-7 text-zinc-400">
+              {item.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+<section className="border-t border-zinc-900 py-20 sm:py-28">
+  <div className="grid gap-12 md:grid-cols-[0.8fr_1.6fr]">
+    <div>
+      <p className="text-xs uppercase tracking-[0.35em] text-zinc-600">
+        System Structure
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        A clear path from introduction to detailed project stories
+      </h2>
+
+      <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
+        The platform is organized into focused sections that introduce
+        the identity, present completed work, collect experiments and
+        provide deeper context through individual case study pages.
+      </p>
+
+      <div className="mt-12 grid gap-4 lg:grid-cols-4">
+        {[
+          {
+            step: "01",
+            title: "Home",
+            description:
+              "Introduces Omnia, the visual identity and the main direction of the portfolio.",
+          },
+          {
+            step: "02",
+            title: "Projects",
+            description:
+              "Presents selected work and connects each completed project to a detailed case study.",
+          },
+          {
+            step: "03",
+            title: "Lab",
+            description:
+              "Collects experimental ideas, interface tests, AI concepts and unfinished prototypes.",
+          },
+          {
+            step: "04",
+            title: "Case Studies",
+            description:
+              "Document the challenge, solution, technical foundation, decisions and results of each project.",
+          },
+        ].map((item) => (
+          <article
+            key={item.step}
+            className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-6"
+          >
+            <p className="text-xs tracking-[0.25em] text-zinc-600">
+              {item.step}
+            </p>
+
+            <h3 className="mt-6 text-lg font-medium text-white">
+              {item.title}
+            </h3>
+
+            <p className="mt-4 text-sm leading-7 text-zinc-400">
               {item.description}
             </p>
           </article>
@@ -183,36 +250,37 @@ export default function SsiAppPage() {
 
     <div>
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-        A modular Angular application with standalone components
+        A modern frontend foundation built for growth
       </h2>
 
       <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-        The project was developed as a modern Angular single-page
-        application. Standalone components were used to keep the
-        structure modular, readable and easier to maintain.
+        Omnia is built with a modern React and Next.js architecture.
+        The project uses reusable components, typed content structures
+        and responsive styling to keep the platform maintainable as new
+        projects and features are added.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         {[
           {
-            title: "Angular",
+            title: "Next.js App Router",
             description:
-              "The application structure, navigation and interactive sections were built with Angular.",
+              "The site uses file-based routing and static rendering for the homepage and individual project pages.",
           },
           {
-            title: "TypeScript",
+            title: "React and TypeScript",
             description:
-              "Typed component logic helped keep the code clearer and more predictable.",
+              "Interactive behavior and content structures are implemented with typed React components.",
           },
           {
-            title: "Standalone components",
+            title: "Tailwind CSS",
             description:
-              "The main sections were separated into reusable and independently organized components.",
+              "The visual system is built with responsive utility classes and a controlled monochrome design language.",
           },
           {
-            title: "Responsive layout",
+            title: "Structured content",
             description:
-              "The interface was designed to remain usable and readable across desktop and mobile screens.",
+              "Multilingual homepage content is separated from the interface logic, making it easier to maintain and expand.",
           },
         ].map((item) => (
           <article
@@ -232,10 +300,11 @@ export default function SsiAppPage() {
 
       <div className="mt-6 flex flex-wrap gap-3 text-xs text-zinc-500">
         {[
-          "Angular 19",
-          "TypeScript 5.7",
-          "Node.js 22",
-          "Responsive UI",
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS v4",
+          "Vercel",
         ].map((technology) => (
           <span
             key={technology}
@@ -258,23 +327,24 @@ export default function SsiAppPage() {
 
     <div>
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-        A complete educational experience about the Solar System
+        A working portfolio system with room to evolve
       </h2>
 
       <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-        The finished application combined educational content,
-        interactive sections and responsive design in one consistent
-        Angular experience for children.
+        Omnia has moved from an initial idea to a functional and
+        deployed platform. It now presents projects, supports multiple
+        languages and provides a foundation for future experiments,
+        content and administration features.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         {[
-          "Responsive Angular application completed",
-          "Planet exploration section implemented",
-          "Interactive quiz functionality added",
-          "Educational video section included",
-          "Playful content and fun facts integrated",
-          "Standalone component structure completed",
+          "Responsive portfolio homepage completed",
+          "English, German and Bulgarian content implemented",
+          "Persistent language selection added",
+          "Dedicated project case study pages created",
+          "Responsive desktop and mobile navigation completed",
+          "Project deployed and connected to GitHub and Vercel",
         ].map((result) => (
           <div
             key={result}
@@ -296,14 +366,14 @@ export default function SsiAppPage() {
 
       <div className="mt-10 border-l border-zinc-700 pl-6">
         <p className="text-xs uppercase tracking-[0.25em] text-zinc-600">
-          Project focus
+          Current status
         </p>
 
         <p className="mt-4 max-w-3xl text-base leading-7 text-zinc-400">
-          The project focused on frontend structure, interaction and
-          educational presentation. It was created as a learning project
-          rather than a production platform with user accounts or a
-          content management system.
+          Omnia is an active project. The current version provides the
+          public portfolio foundation, while future stages may include
+          richer project media, interactive 3D elements and an
+          administration system for managing content.
         </p>
       </div>
     </div>
@@ -319,34 +389,40 @@ export default function SsiAppPage() {
 
     <div>
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-        Simple choices for a clear and child-friendly experience
+        Clear choices for identity, usability and future growth
       </h2>
 
       <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-        The project decisions focused on keeping the application easy
-        to understand, visually engaging and realistic within the
-        available development time.
+        The project decisions were guided by the need to create a
+        distinctive personal identity without sacrificing clarity,
+        performance or the ability to expand the platform over time.
       </p>
 
       <div className="mt-12 space-y-4">
         {[
           {
             number: "01",
-            title: "Separate content into focused sections",
+            title: "Keep the visual identity monochrome",
             description:
-              "Planets, quizzes, videos and playful content were divided into clear areas so children could move through the application without unnecessary complexity.",
+              "The interface uses black, white and controlled shades of grey so typography, structure and project content remain the main focus.",
           },
           {
             number: "02",
-            title: "Use standalone Angular components",
+            title: "Separate content from interface logic",
             description:
-              "Each main section was organized as an independent component, making the project structure easier to understand, develop and maintain.",
+              "Multilingual text is stored in structured content files, making translations easier to maintain without mixing them into the page layout.",
           },
           {
             number: "03",
-            title: "Prioritize interaction over complex features",
+            title: "Build project pages as case studies",
             description:
-              "The project focused on educational content, responsive presentation and simple interaction instead of accounts, databases or administrative functionality.",
+              "Projects are presented through complete stories with context, technical choices and outcomes instead of simple screenshots or short descriptions.",
+          },
+          {
+            number: "04",
+            title: "Add effects only when they serve the identity",
+            description:
+              "Motion and color are used sparingly, such as the temporary watercolor animation in the Hero, while the overall experience remains calm and focused.",
           },
         ].map((decision) => (
           <article
@@ -382,31 +458,31 @@ export default function SsiAppPage() {
 
     <div>
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-        Turning learning goals into a complete frontend project
+        Building a real product through steady iteration
       </h2>
 
       <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-        The project helped me strengthen my understanding of Angular,
-        component-based architecture, responsive design and presenting
-        educational content through a clear user interface.
+        Omnia has helped me improve not only my frontend development
+        skills, but also the way I plan, evaluate and refine a digital
+        product over time.
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-3">
         {[
           {
-            title: "Angular structure",
+            title: "Product thinking",
             description:
-              "I learned how to divide a larger application into clear standalone components with focused responsibilities.",
+              "I learned to make decisions based on the purpose of the platform instead of adding features only because they are visually interesting.",
           },
           {
-            title: "Responsive design",
+            title: "Design consistency",
             description:
-              "I gained practical experience adapting layouts and content for different screen sizes.",
+              "I developed a clearer understanding of typography, spacing, hierarchy and maintaining one visual language across different pages.",
           },
           {
-            title: "User-focused thinking",
+            title: "Iterative development",
             description:
-              "I learned to simplify navigation and content presentation for a younger target audience.",
+              "I learned to build in meaningful steps, test each block and improve the project without losing control of the overall direction.",
           },
         ].map((lesson) => (
           <article
@@ -435,12 +511,13 @@ export default function SsiAppPage() {
     <div className="mt-8 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
       <div>
         <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Explore the rest of my work
+          Continue exploring Omnia
         </h2>
 
         <p className="mt-5 max-w-xl text-base leading-7 text-zinc-400">
-          Return to the main portfolio to discover more projects,
-          experiments and ideas developed under Omnia by Ferro.
+          Return to the main portfolio to explore the other projects,
+          experiments and ideas that are part of the evolving Omnia
+          system.
         </p>
       </div>
 

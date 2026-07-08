@@ -2630,3 +2630,11 @@ Commits:
 - Documented the project overview, solution, application structure, technical foundation, outcome, key decisions and lessons learned.
 - Connected the SSI App project card on the homepage to the new case study route.
 
+## 2026-07-08 — Omnia case study and project naming update
+
+- Added a complete case study page for Omnia by Ferro.
+- Connected the Omnia project card to its dedicated case study route.
+- Renamed the public project title from SSI App to Solar System App while keeping the existing `/projects/ssi-app` route.
+
+
+

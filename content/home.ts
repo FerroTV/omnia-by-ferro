@@ -97,7 +97,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         },
         {
           category: "Learning Project",
-          title: "SSI App",
+          title: "Solar System App",
           description:
             "Educational Angular application with interactive sections for children, created as a learning project with planets, quizzes and playful content.",
           tags: ["Angular", "TypeScript", "Learning App"],
@@ -109,6 +109,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Personal digital space, portfolio and creative archive for code, AI concepts, visual experiments and future digital systems.",
           tags: ["Next.js", "Tailwind CSS", "Portfolio"],
+          href: "/projects/omnia-by-ferro",
         },
       ],
     },
@@ -211,7 +212,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         },
         {
           category: "Lernprojekt",
-          title: "SSI App",
+          title: "Solar System App",
           description:
             "Eine pädagogische Angular-Anwendung mit interaktiven Bereichen für Kinder, entwickelt als Lernprojekt mit Planeten, Quizzen und spielerischen Inhalten.",
           tags: ["Angular", "TypeScript", "Lern-App"],
@@ -223,6 +224,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Persönlicher digitaler Raum, Portfolio und kreatives Archiv für Code, KI-Konzepte, visuelle Experimente und zukünftige digitale Systeme.",
           tags: ["Next.js", "Tailwind CSS", "Portfolio"],
+          href: "/projects/omnia-by-ferro",
         },
       ],
     },
@@ -325,7 +327,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         },
         {
           category: "Учебен проект",
-          title: "SSI App",
+          title: "Solar System App",
           description:
             "Образователно Angular приложение с интерактивни секции за деца, създадено като учебен проект с планети, тестове и игрово съдържание.",
           tags: ["Angular", "TypeScript", "Образователно приложение"],
@@ -337,6 +339,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Лично дигитално пространство, портфолио и творчески архив за код, концепции с изкуствен интелект, визуални експерименти и бъдещи дигитални системи.",
           tags: ["Next.js", "Tailwind CSS", "Портфолио"],
+          href: "/projects/omnia-by-ferro",
         },
       ],
     },
