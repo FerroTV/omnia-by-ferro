@@ -5,6 +5,7 @@ type ProjectItem = {
   title: string;
   description: string;
   tags: string[];
+  href?: string;
 };
 
 type LabItem = {
@@ -92,6 +93,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Outlook and calendar integration for a PHP-based CRM system, focused on reducing media breaks and documenting communication.",
           tags: ["PHP", "Microsoft Graph", "CRM"],
+          href: "/projects/outlook-crm-integration",
         },
         {
           category: "Learning Project",
@@ -204,6 +206,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Outlook- und Kalenderintegration für ein PHP-basiertes CRM-System mit dem Ziel, Medienbrüche zu reduzieren und Kommunikation zu dokumentieren.",
           tags: ["PHP", "Microsoft Graph", "CRM"],
+          href: "/projects/outlook-crm-integration",
         },
         {
           category: "Lernprojekt",
@@ -316,6 +319,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           description:
             "Интеграция на Outlook и календар в CRM система, базирана на PHP, с фокус върху намаляването на прекъсванията между различни системи и документирането на комуникацията.",
           tags: ["PHP", "Microsoft Graph", "CRM"],
+          href: "/projects/outlook-crm-integration",
         },
         {
           category: "Учебен проект",

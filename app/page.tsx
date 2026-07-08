@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
 import { homeContent } from "@/content/home";
@@ -400,35 +400,65 @@ export default function Home() {
         </h2>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {content.projects.items.map((project) => (
-            <article
-              key={project.title}
-              className="rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70"
-            >
-              <p className="text-sm text-zinc-500">
-                {project.category}
-              </p>
+          {content.projects.items.map((project) => {
+  const cardContent = (
+    <>
+      <p className="text-sm text-zinc-500">
+        {project.category}
+      </p>
 
-              <h3 className="mt-4 text-xl font-medium text-white">
-                {project.title}
-              </h3>
+      <h3 className="mt-4 text-xl font-medium text-white">
+        {project.title}
+      </h3>
 
-              <p className="mt-4 text-sm leading-6 text-zinc-400">
-                {project.description}
-              </p>
+      <p className="mt-4 text-sm leading-6 text-zinc-400">
+        {project.description}
+      </p>
 
-              <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-zinc-800 px-3 py-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
+      <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-500">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full border border-zinc-800 px-3 py-1"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      {project.href && (
+        <p className="mt-8 flex items-center gap-2 text-sm text-zinc-300 transition group-hover:text-white">
+          View case study
+          <span
+            aria-hidden="true"
+            className="transition group-hover:translate-x-1"
+          >
+            →
+          </span>
+        </p>
+      )}
+    </>
+  );
+
+  return (
+    <article
+      key={project.title}
+      className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-zinc-900/70"
+    >
+      {project.href ? (
+        <Link
+          href={project.href}
+          className="block h-full"
+        >
+          {cardContent}
+        </Link>
+      ) : (
+        cardContent
+      )}
+    </article>
+  );
+})}
+
         </div>
       </section>
 

@@ -2616,3 +2616,10 @@ Commits:
 - `dc953df Polish navigation scrolling and active states`
 - `f745fe0 Synchronize active navigation during smooth scroll`
 
+## 2026-07-08 — CRM case study and project navigation
+
+- Added a complete case study page for the Outlook and Microsoft Graph CRM integration.
+- Documented the challenge, solution, technical foundation, outcome, key decisions and lessons learned.
+- Connected the CRM project card on the homepage to the new case study route.
+- Added project links to the multilingual content structure.
+- Added VS Code workspace settings for Tailwind CSS syntax support.
