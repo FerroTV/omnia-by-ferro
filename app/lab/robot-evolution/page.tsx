@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
@@ -147,7 +148,7 @@ export default function RobotEvolutionPage() {
                 fill
                 unoptimized
                 sizes="(max-width: 640px) 100vw, 1152px"
-                className="pointer-events-none object-contain p-4 opacity-0 blur-md transition-all duration-900 ease-in-out sm:p-10"
+                className="pointer-events-none object-contain px-4 pb-5 pt-32 opacity-0 blur-md transition-all duration-900 ease-in-out sm:p-10"
                 style={{
                   transform:
                     "scale(1.035) translateY(-4px)",
@@ -163,7 +164,7 @@ export default function RobotEvolutionPage() {
               unoptimized
               priority={active.id === "sketch"}
               sizes="(max-width: 640px) 100vw, 1152px"
-              className="object-contain p-4 transition-all duration-900 ease-in-out sm:p-10"
+              className="object-contain px-4 pb-5 pt-32 transition-all duration-900 ease-in-out sm:p-10"
               style={{
                 animation: isMorphing
                   ? "robotMorphIn 900ms cubic-bezier(0.22, 1, 0.36, 1)"
@@ -180,7 +181,7 @@ export default function RobotEvolutionPage() {
             </div>
 
             <div
-              className={`pointer-events-none absolute bottom-5 left-5 right-5 z-20 text-center sm:bottom-auto sm:top-1/2 sm:w-56 sm:-translate-y-1/2 sm:text-left ${
+              className={`pointer-events-none absolute left-5 right-5 top-14 z-20 text-center sm:bottom-auto sm:top-1/2 sm:w-56 sm:-translate-y-1/2 sm:text-left ${
                 textOnLeft
                   ? "sm:left-8 sm:right-auto"
                   : "sm:left-auto sm:right-8"
@@ -228,7 +229,7 @@ export default function RobotEvolutionPage() {
                 }}
               />
 
-              <div className="relative grid grid-cols-4">
+              <div className="relative grid grid-cols-4 px-3 sm:px-0">
                 {STAGES.map((stage, index) => {
                   const isActive =
                     stage.id === activeStage;
@@ -258,13 +259,19 @@ export default function RobotEvolutionPage() {
                       />
 
                       <span
-                        className={`mt-4 text-[11px] uppercase tracking-[0.22em] transition sm:text-xs ${
+                        className={`mt-4 text-[10px] uppercase tracking-[0.16em] transition sm:text-xs sm:tracking-[0.22em] ${
                           isActive
                             ? "text-white"
                             : "text-zinc-600 group-hover:text-zinc-300"
                         }`}
                       >
-                        {stage.label}
+                        <span className="sm:hidden">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <span className="hidden sm:inline">
+                          {stage.label}
+                        </span>
                       </span>
                     </button>
                   );
