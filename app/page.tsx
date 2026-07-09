@@ -518,42 +518,67 @@ export default function Home() {
 </section>
 
       <section
-        id="about"
-        className="mx-auto max-w-6xl px-6 py-24"
-      >
-        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
-          {content.about.label}
-        </p>
+  id="about"
+  className="mx-auto max-w-6xl px-6 py-24 sm:py-32"
+>
+  <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+    <div className="lg:sticky lg:top-28 lg:self-start">
+      <p className="mb-5 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
+        {content.about.label}
+      </p>
 
-        <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-            {content.about.name}
-          </h2>
+      <h2 className="max-w-md text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
+        {content.about.name}
+      </h2>
 
-          <div className="space-y-6 text-lg leading-8 text-zinc-400">
-            {content.about.paragraphs.map(
-              (paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ),
-            )}
+      <div className="mt-10 h-px w-20 bg-zinc-700" />
 
-            <p className="text-zinc-300">
-              {content.about.statement}
+      <p className="mt-10 max-w-sm text-sm uppercase leading-7 tracking-[0.22em] text-zinc-600">
+        Software · AI · Interfaces · Creative systems
+      </p>
+    </div>
+
+    <div>
+      <div className="space-y-8 text-lg leading-8 text-zinc-400 sm:text-xl sm:leading-9">
+        {content.about.paragraphs.map(
+          (paragraph, index) => (
+            <p
+              key={paragraph}
+              className={
+                index === 0
+                  ? "text-zinc-200"
+                  : undefined
+              }
+            >
+              {paragraph}
             </p>
+          ),
+        )}
+      </div>
 
-            <div className="flex flex-wrap gap-2 pt-2 text-xs text-zinc-500">
-              {content.about.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-zinc-800 px-3 py-1"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="mt-14 border-l border-zinc-700 pl-6 sm:pl-8">
+        <p className="max-w-2xl text-2xl font-medium leading-9 tracking-tight text-white sm:text-4xl sm:leading-[1.2]">
+          {content.about.statement}
+        </p>
+      </div>
+
+      <div className="mt-14 flex flex-wrap gap-3">
+        {content.about.tags.map((tag, index) => (
+          <span
+            key={tag}
+            className="flex items-center gap-3 rounded-full border border-zinc-800 bg-zinc-950/50 px-4 py-2 text-xs uppercase tracking-[0.18em] text-zinc-500"
+          >
+            <span className="text-[9px] text-zinc-700">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <section
         id="contact"

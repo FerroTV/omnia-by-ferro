@@ -142,16 +142,22 @@ export const homeContent: Record<Locale, HomeContent> = {
       ],
     },
     about: {
-      label: "About",
-      name: "Zhelyazko “Ferro” Zhelyazkov.",
-      paragraphs: [
-        "I am building Omnia as a personal digital space where software development, AI concepts, visual experiments and learning paths can live together.",
-        "This website is not meant to be only a portfolio. It is also a growing archive of ideas, prototypes, unfinished thoughts and systems that may become something bigger over time.",
-        "My focus is on clean digital products, thoughtful interfaces, practical learning and the connection between technology and creativity.",
-      ],
-      statement: "Omnia is the space. Ferro is the signature.",
-      tags: ["Software", "AI Concepts", "Interfaces", "Creative Systems"],
-    },
+  label: "About",
+  name: "Zhelyazko Zhelyazkov - Ferro.",
+  paragraphs: [
+    "I am a software developer in progress, a visual thinker and a curious builder based in Germany. My path combines technology, design, experimentation and the constant process of learning how ideas become working systems.",
+    "I am interested not only in writing code, but in understanding how people experience technology - how an interface feels, how information is structured and how intelligent systems can become more useful, personal and human.",
+    "Omnia is where I document that journey. It brings together the projects I have completed, the concepts I am still developing and the experiments that help me discover what I want to build next.",
+  ],
+  statement:
+    "I do not present a finished identity. I am building one.",
+  tags: [
+    "Software Development",
+    "AI Exploration",
+    "Interface Design",
+    "Creative Technology",
+  ],
+},
     contact: {
       label: "Contact",
       title: "Let’s connect.",
@@ -256,17 +262,23 @@ export const homeContent: Record<Locale, HomeContent> = {
         },
       ],
     },
-    about: {
-      label: "Über mich",
-      name: "Zhelyazko “Ferro” Zhelyazkov.",
-      paragraphs: [
-        "Ich entwickle Omnia als persönlichen digitalen Raum, in dem Softwareentwicklung, KI-Konzepte, visuelle Experimente und Lernwege zusammenleben können.",
-        "Diese Website soll nicht nur ein Portfolio sein. Sie ist auch ein wachsendes Archiv für Ideen, Prototypen, unfertige Gedanken und Systeme, aus denen mit der Zeit etwas Größeres entstehen kann.",
-        "Mein Schwerpunkt liegt auf klaren digitalen Produkten, durchdachten Interfaces, praktischem Lernen und der Verbindung zwischen Technologie und Kreativität.",
-      ],
-      statement: "Omnia ist der Raum. Ferro ist die Signatur.",
-      tags: ["Software", "KI-Konzepte", "Interfaces", "Kreative Systeme"],
-    },
+   about: {
+  label: "Über mich",
+  name: "Zhelyazko Zhelyazkov - Ferro.",
+  paragraphs: [
+    "Ich bin angehender Softwareentwickler, visueller Denker und neugieriger Gestalter mit Sitz in Deutschland. Mein Weg verbindet Technologie, Design, Experimente und den kontinuierlichen Prozess, aus Ideen funktionierende Systeme zu entwickeln.",
+    "Mich interessiert nicht nur das Schreiben von Code, sondern auch die Frage, wie Menschen Technologie erleben - wie sich ein Interface anfühlt, wie Informationen strukturiert werden und wie intelligente Systeme nützlicher, persönlicher und menschlicher werden können.",
+    "Omnia ist der Ort, an dem ich diesen Weg dokumentiere. Hier treffen abgeschlossene Projekte, Ideen in Entwicklung und Experimente aufeinander, durch die ich entdecke, was ich als Nächstes erschaffen möchte.",
+  ],
+  statement:
+    "Ich präsentiere keine fertige Identität. Ich entwickle sie.",
+  tags: [
+    "Softwareentwicklung",
+    "KI-Experimente",
+    "Interface-Design",
+    "Kreative Technologie",
+  ],
+},
     contact: {
       label: "Kontakt",
       title: "Lass uns in Kontakt treten.",
@@ -372,21 +384,22 @@ export const homeContent: Record<Locale, HomeContent> = {
       ],
     },
     about: {
-      label: "За мен",
-      name: "Желязко „Ferro“ Желязков.",
-      paragraphs: [
-        "Изграждам Omnia като лично дигитално пространство, в което софтуерната разработка, концепциите с изкуствен интелект, визуалните експерименти и процесите на учене могат да съществуват заедно.",
-        "Този уебсайт не е замислен само като портфолио. Той е и развиващ се архив от идеи, прототипи, незавършени мисли и системи, които с времето могат да се превърнат в нещо по-голямо.",
-        "Фокусът ми е върху чисти дигитални продукти, обмислени интерфейси, практическо учене и връзката между технологиите и творчеството.",
-      ],
-      statement: "Omnia е пространството. Ferro е подписът.",
-      tags: [
-        "Софтуер",
-        "Концепции с изкуствен интелект",
-        "Интерфейси",
-        "Творчески системи",
-      ],
-    },
+  label: "За мен",
+  name: "Желязко Желязков - Ferro.",
+  paragraphs: [
+    "Аз съм развиващ се софтуерен разработчик, визуален мислител и любопитен създател, базиран в Германия. Пътят ми съчетава технологии, дизайн, експерименти и постоянния процес по превръщане на идеите в работещи системи.",
+    "Интересува ме не само писането на код, а и начинът, по който хората преживяват технологиите - как се усеща един интерфейс, как се структурира информацията и как интелигентните системи могат да станат по-полезни, по-лични и по-човешки.",
+    "Omnia е мястото, в което документирам този път. Тук се срещат завършените ми проекти, идеите, които все още развивам, и експериментите, чрез които откривам какво искам да създам след това.",
+  ],
+  statement:
+    "Не представям завършена идентичност. Изграждам я.",
+  tags: [
+    "Софтуерна разработка",
+    "AI експерименти",
+    "Дизайн на интерфейси",
+    "Творчески технологии",
+  ],
+},
     contact: {
       label: "Контакт",
       title: "Нека се свържем.",
