@@ -1,4 +1,7 @@
 "use client";
+
+import Image from "next/image";
+import Link from "next/link";
 import ProjectsTimeline from "@/components/ProjectsTimeline";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
@@ -431,42 +434,92 @@ export default function Home() {
 />
 
       <section
-        id="lab"
-        className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
-      >
-        <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
-          {content.lab.label}
-        </p>
+  id="lab"
+  className="mx-auto max-w-6xl px-6 py-24"
+>
+  <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
+    {content.lab.label}
+  </p>
 
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-          {content.lab.title}
-        </h2>
+  <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+    {content.lab.title}
+  </h2>
 
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-          {content.lab.description}
-        </p>
+  <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
+    {content.lab.description}
+  </p>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          {content.lab.items.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-5"
-            >
-              <h3 className="text-sm font-medium text-white">
-                {item.title}
-              </h3>
+  <Link
+    href="/lab/robot-evolution"
+    className="group mt-12 block"
+  >
+    <div className="relative overflow-hidden py-10 sm:py-14">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.72fr)] lg:items-center">
+        <div>
+          <p className="text-xs uppercase tracking-[0.32em] text-zinc-600">
+            01 — Interactive experiment
+          </p>
 
-              <p className="mt-3 text-sm leading-6 text-zinc-500">
-                {item.description}
-              </p>
-            </div>
-          ))}
+          <h3 className="mt-5 max-w-2xl text-3xl font-semibold tracking-tight text-white transition-transform duration-500 group-hover:translate-x-2 sm:text-5xl">
+            Robot evolution
+          </h3>
+
+          <p className="mt-5 max-w-xl text-base leading-7 text-zinc-400">
+            A visual metaphor for how an idea develops
+            from a first sketch into structure,
+            prototype and final form.
+          </p>
+
+          <div className="mt-8 flex items-center gap-3 text-sm text-zinc-300">
+            <span>Open experiment</span>
+
+            <span className="transition-transform duration-300 group-hover:translate-x-2">
+              →
+            </span>
+          </div>
         </div>
-      </section>
+
+        <div className="relative h-[360px] overflow-hidden rounded-3xl border border-zinc-800 bg-black sm:h-[440px]">
+          <div className="absolute inset-x-0 top-5 bottom-20 overflow-hidden sm:bottom-24">
+            <Image
+              src="/robots/evolution/robot-perfected.png"
+              alt="Robot evolution preview"
+              fill
+              unoptimized
+              sizes="(max-width: 1024px) 100vw, 440px"
+              className="object-contain p-0 transition-transform duration-700 group-hover:scale-[1.012]"
+            />
+          </div>
+
+          <div className="pointer-events-none absolute inset-x-6 bottom-4">
+            <div className="relative h-px bg-zinc-800">
+              <div className="absolute left-0 top-0 h-px w-full bg-white" />
+
+              <div className="absolute left-0 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-white" />
+
+              <div className="absolute left-1/3 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-500 bg-black" />
+
+              <div className="absolute left-2/3 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-500 bg-black" />
+
+              <div className="absolute right-0 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border border-white bg-black" />
+            </div>
+
+            <div className="mt-4 grid grid-cols-4 text-center text-[9px] uppercase tracking-[0.18em] text-zinc-600">
+              <span>Sketch</span>
+              <span>Structure</span>
+              <span>Prototype</span>
+              <span>Perfected</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Link>
+</section>
 
       <section
         id="about"
-        className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
+        className="mx-auto max-w-6xl px-6 py-24"
       >
         <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           {content.about.label}
@@ -504,7 +557,7 @@ export default function Home() {
 
       <section
         id="contact"
-        className="mx-auto max-w-6xl border-t border-zinc-900 px-6 py-24"
+        className="mx-auto max-w-6xl px-6 py-24"
       >
         <p className="mb-4 w-fit rounded-full border border-zinc-900 bg-zinc-950/60 px-3 py-1 text-xs uppercase tracking-[0.35em] text-zinc-500">
           {content.contact.label}
